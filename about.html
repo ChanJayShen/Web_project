@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>The Connected Random Team Profile</title>
+  <style>
+    body {
+      max-width: 800px;
+      font-family: Arial, sans-serif;
+      margin: 30px;
+      line-height: 1.6;
+    }
+
+    /* Student IDs aligned right */
+    .student-heading {
+      text-align: right;
+      /* moves the heading text to the right */
+      margin-right: 20px;
+      /* optional: adds spacing from the edge */
+    }
+
+    .student-id {
+      text-align: right;
+      font-style: italic;
+      color: #333333;
+    }
+
+    /* Group photo with border */
+    figure {
+      border: 5px solid #333;
+      /* adds a border around the figure */
+      padding: 10px;
+      /* space between border and photo */
+      margin: 20px auto;
+      /* centers the figure */
+      background-color: #f9f9f9;
+      /* optional background */
+      width: fit-content;
+      /* keeps border tight around image */
+    }
+
+
+    figure img {
+      max-width: 300px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    figcaption {
+      text-align: center;
+    }
+
+    /* Member contributions */
+    .member {
+      border: 3px solid #000000;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+
+    dt {
+      font-weight: bold;
+      color: #004080;
+    }
+
+    dd {
+      margin-left: 1.5em;
+      margin-bottom: 0.3em;
+    }
+
+    /* Fun facts table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    caption {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    th {
+      font-weight: bold;
+      background-color: #e0e0e0;
+      border: 2px solid #333333;
+      padding: 20px;
+    }
+
+    td {
+      border: 2px solid #333333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    tr:nth-child(even) {
+      background-color: white;
+      /* soft green */
+    }
+
+    tr:nth-child(odd) {
+      background-color: white;
+      /* soft red */
+    }
+
+    tr:hover {
+      background-color: lightcyan;
+      /* light blue */
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Student IDs -->
+  <h2 class="student-heading">Student IDs</h2>
+  <p class="student-id">Adam Faris – J23040815</p>
+  <p class="student-id">Xiao Teng – J24042382</p>
+  <p class="student-id">Jay Shen – J25044225</p>
+  <p class="student-id">Sheng Meng – J26046158</p>
+
+  <!-- Group Info -->
+  <h2>Team Profile</h2>
+  <ul>
+    <li>The Connected Random
+      <ul>
+        <li>Class Day: Tuesday
+          <ul>
+            <li>Time: 2–4 PM</li>
+          </ul>
+        </li>
+        <li>Class Day: Wednesday
+          <ul>
+            <li>Time: 8–10 AM</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+
+
+  <!-- Member Contributions -->
+  <h2>Member Contributions & Quotes</h2>
+  <dl>
+    <div class="member">
+      <dt>Adam Faris</dt>
+      <dd>Contribution: CSS styling & Section of Company details Page</dd>
+      <dd>Quote: "The two most important days in your life are the day you are born and the day you find out why"
+        -mark
+        twain</dd>
+      <dd>First Language: Bahasa Melayu</dd>
+      <dd>Favourite Language: Japanese</dd>
+    </div>
+
+    <div class="member">
+      <dt>Xiao Teng</dt>
+      <dd>Contribution: CSS styling & Section of Team Profile Page</dd>
+      <dd>Quote: "Structure first, style follows."</dd>
+      <dd>First Language: HTML</dd>
+    </div>
+
+    <div class="member">
+      <dt>Jay Shen</dt>
+      <dd>Contribution: CSS styling & Section of Job Application form Page</dd>
+      <dd>Quote: "Philippians 4:13 I can do all things through Christ who strengthen me"</dd>
+      <dd>First Language: English </dd>
+    </div>
+
+    <div class="member">
+      <dt>Sheng Meng</dt>
+      <dd>Contribution: CSS styling & Section of Position Descriptions page </dd>
+      <dd>Quote: " I love being interesting"</dd>
+      <dd>First Language: English</dd>
+    </div>
+  </dl>
+
+  <!-- Group Photo -->
+  <h2>Our Team</h2>
+  <figure class="group photo">
+    <img src="group photos cos10026.jpeg" alt="Group Photo of The Connected Random">
+    <figcaption> The Connected Random </figcaption>
+  </figure>
+
+  <!-- Fun Facts Table -->
+  <h2>Fun Facts</h2>
+  <table>
+    <caption>Team Fun Facts</caption>
+    <tr>
+      <th>Name</th>
+      <th>Dream Job</th>
+      <th>Coding Snack</th>
+      <th>Hometown</th>
+    </tr>
+    <tr>
+      <td>Adam Faris</td>
+      <td>Writer</td>
+      <td>Nuts</td>
+      <td>Penang</td>
+    </tr>
+    <tr>
+      <td>Xiao Teng</td>
+      <td>Entrepreneur</td>
+      <td>Biscuit</td>
+      <td>Terengganu</td>
+    </tr>
+    <tr>
+      <td>Jay Shen</td>
+      <td>Cybersecurity analyst</td>
+      <td>Water</td>
+      <td>Puchong</td>
+    </tr>
+    <tr>
+      <td>Sheng Meng</td>
+      <td>Tester</td>
+      <td>Cadbury</td>
+      <td>Kl</td>
+    </tr>
+  </table>
+
+</body>
+
+</html>
