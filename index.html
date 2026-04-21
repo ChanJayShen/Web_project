@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style> :root {
+    --text-primary: #2C3E50;
+    --text-secondary: #555555;
+    --bg-base: #162dc2;
+    --brand-accent: #6C5CE7;
+    --brand-accent-hover: #4834D4;
+    --white: #ffffff;
+}
+
+
+/* Global Styles */
+aside:hover {display:block;}
+
+nav ul li {display: inline-block;}
+
+nav ul { list-style:none;}
+
+aside {
+    border: 4px inset blue;
+    border-radius: 14px;
+    width: 30%;
+    margin: 1em;
+    padding: 1em;
+    background:url(images/fade.jpg) repeat-x top left;
+    float:left;
+    box-shadow: 20px 20px 10px #000000;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-primary);
+    background-color: var(--bg-base);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+
+/* Layout Containers */
+header, main, footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 6px #000000;
+    margin-bottom: 30px;
+    padding-bottom: 0;
+    padding: 20px 40px;
+    border-bottom: 2px solid #EEE;
+}
+
+
+.company-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    border-radius: 50%;
+    background-color: var(--bg-base); 
+}
+
+h1 {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 2.5rem;
+}
+
+.slogan {
+    color: var(--brand-accent);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Navigation Menu */
+.nav-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    float: right;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: var(--brand-accent);
+    border-radius: 5px 5px 0 0;
+}
+
+.nav-menu li {
+    display: inline;
+    float: right;
+}
+
+.nav-menu a {
+    display: inline-block;
+    padding: 15px 25px;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu a:hover, 
+.nav-menu a[aria-current="page"] {
+    background-color: var(--brand-accent-hover);
+}
+
+
+
+/* Main Content Styles */
+main {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px #000000;
+    padding: 40px;
+    margin-bottom: 30px;
+}
+
+
+h2 {
+    border-bottom: 2px solid var(--brand-accent);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
+
+.featured-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 1px solid #EEEEEE;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--text-primary);
+    color: var(--white);
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    padding: 30px 20px;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #A4B0BE;
+    text-decoration: none;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+    color: var(--white);
+    text-decoration: underline;
+}
+ </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Official recruitment site for GameX Studios.">
+    <title>GameX Studios | Game Dev Careers</title>
+</head>
+<body>
+
+    <div class="site-container">
+
+        <header>
+            <div class="header-content">
+                <a href="index.html" class="logo-link">
+                    <img src="GameX_Studios_Logo.png" alt="GameX Studios Logo" class="logo">
+                    <div class="brand-text">
+                </a>
+                <p class="slogan">Where Imaginations Turn Into Reality</p>
+            </div>
+            
+            <nav aria-label="Main Navigation">
+                <ul class="nav-menu">
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="positions.html">Job Positions</a></li>
+                    <li><a href="apply.html">Job Application</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-text">
+                    <h1>Shape the Future of Play</h1>
+                    <p>Join Kuala Lumpur's leading game studio in building the next generation of RPGs.</p>
+                    <a href="positions.html" class="cta-button">View Openings</a>
+                </div>
+            </section>
+
+            <section class="company-intro">
+                <div class="text-block">
+                    <h3>About Our Studio</h3>
+                    <p>
+                        GameX Studios is an innovative game development studio currently expanding our core tech team. 
+                        We specialize in building immersive, high-performance experiences that push the boundaries 
+                        of digital content creation.
+                    </p>
+                    <a href="index.html" class="logo-link">
+                    <img src="Small game studio.png" alt="Small game studio" class="logo">
+                    <div class="brand-text">
+                </a>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <p><strong>GameX Studios</strong></p>
+                    <p>Kuala Lumpur, Selangor, Malaysia</p>
+                </div>
+                <div class="footer-links-container">
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/GameXStudios">GitHub</a></li>
+                        <li><a href="https://jira.GameXStudios.com">Jira</a></li>
+                        <li><a href="mailto:info@GameXStudios.com">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2026 GameX Studios. All rights reserved.</p>
+        </footer>
+
+    </div> </body>
+</html>
