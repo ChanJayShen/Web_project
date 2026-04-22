@@ -1,119 +1,164 @@
-<!DOCTYPE html><!-- document type declaration -->
-<meta charset="utf-8" /><!-- character encoding declaration -->
-<html lang="en"><!-- root element with language attribute -->
-  <meta name="description" content="Job description" />
-  <meta name="keywords" content="Job, Description, Positions, Requirements, Benefits" />
-  <meta name="author" content="Human Resources" />
-<nav><!-- navigation menu -->
-    <p class="menu"><a href="#heading">Company Description</a></p>
-    <p class="menu"><a href="#position">Positions Available</a></p>
-    <p class="menu"><a href="#requirements">Job Requirements</a></p>
-    <p class="menu"><a href="#benefits">Benefits</a></p>
-</nav>
-<hr>
-<head><!-- head section -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Job description" />
+    <meta name="keywords" content="Job, Description, Positions, Requirements, Benefits" />
+    <meta name="author" content="Human Resources" />
     <title>Job Description</title>
+    <link href="layout.css" rel="stylesheet">
     <style>
-        h1 {text-decoration: underline; text-align: center;}
-        h2 {text-decoration: underline; text-align: center;}
-        .a {text-indent: 5%; text-align: justify;}
-        .b {text-indent: 5%; text-align: justify;}
-        .c {text-indent: 5%; text-align: justify;}
-        .d {text-indent: 5%; text-align: justify;}
-        .e {text-indent: 5%; text-align: justify;}
-        ul {list-style-type: square; border: 1px solid cyan;}
-        ol {list-style-type: decimal;}
-        body {font-family: Arial, sans-serif;}
-    </style><!-- embedded CSS stylesheet -->
-    <link rel="stylesheet" type="text/css" href="positions.css" /><!-- external CSS stylesheet -->
+        body { font-family: Arial, sans-serif;}
+        nav.jobs { background-color: #f4f4f4; padding: 10px; border-radius: 5px; }
+        .menu { display: inline; margin-right: 15px; font-weight: bold; }
+        .menu a { text-decoration: none; color: #333; }
+        .menu a:hover { color: #3b82f6; }
+        
+        h1, h2 { text-decoration: underline; text-align: center; }
+        
+        .a, .b, .c, .d, .e { text-indent: 5%; text-align: justify; margin-bottom: 5px; }
+        
+    
+        ol { list-style-type: decimal; }
+        
+        section, aside { margin-top: 30px; }
+        hr { border: 0; border-top: 1px solid #ccc; margin: 20px 0; }
+        
+    </style>
+   
 </head>
-<body><!-- body section -->
-<header id="heading"><!-- header section -->
-<h1>Company Description</h1>
-    <h2>Our Mission:</h2>
-    <p>We are an indie game studio dedicated to creating innovative and engaging gaming experiences. We are looking for skilled and motivated individuals to join our team.</p>
-    <h2>Why we need you:</h2>
-    <p>We have available positions that involve designing, developing, and maintaining the fundamental aspects of our titles, as well as collaborating with diverse work-teams to deliver high-quality products.</p>
-    <h2>Why you should join us:</h2>
-    <p>If you are passionate about game development and eager to contribute to innovative projects, we encourage you to apply for this exciting opportunity. Join our dynamic team and help us shape the future of indie games development!</p>
-</header>
-<section id="position"><!-- position section -->
-<h2>Positions</h2>
-<ol>
-    <ul><i>Junior UI/UX Designer:</i> 
-        <li class="a">Design the artistic elements and user interfaces for our game titles.</li>
-        <li class="b">Reference No.: UI011</li>
-        <li class="c">As a UI/UX Designer, you will be responsible for creating intuitive and engaging user interfaces for our game titles. You will work closely with development teams to ensure that our products are both visually appealing and easy to use.</li><!-- referenced to vscode copilot -->
-        <li class="d"> Salary: $50,000 - $70,000 per year</li>
-        <li class="e">Reporting line: Lead UI/UX Director</li></ul>
-<hr>
-    <ul><i>Junior Engine Programmer:</i>
-        <li class="a">A position working on the development and maintenance of our game engine for our applications.</li>
-        <li class="b">Reference No.: JP020</li>
-        <li class="c">As a Junior Engine Programmer, you will be responsible for working on crucial aspects of Engine Development, writing performant, robust, and maintainable code, and debugging, profiling, and optimizing code to meet quality and performance targets.</li><!-- sourced from indeed.com -->
-        <li class="d"> Salary: $60,000 - $80,000 per year</li>
-        <li class="e">Reporting line: Lead Engine Programmer</li></ul>
-<hr>
-    <ul><i>DevOps Engineer:</i>
-        <li class="a">This position is responsible for managing the infrastructure and deployment processes of our games, ensuring efficient and reliable deployment.</li>
-        <li class="b">Reference No.: DO130</li>
-        <li class="c">As a DevOps Engineer, you will be responsible for managing the infrastructure and deployment processes of our game files. You will work closely with development teams to ensure that our applications are deployed efficiently and reliably.</li><!-- referenced to vscode copilot -->
-        <li class="d"> Salary: $85,000 - $110,000 per year</li>
-        <li class="e">Reporting line: Product Manager</li></ul>
-<hr>
-</ol>
-</section>
-<section id="requirements"><!-- requirements section -->
-<h2>Job Requirements</h2>
-<ol>
-<ul><strong>Junior UI/UX Designer:</strong>
-    <li>Proven experience as a UI/UX Designer or similar role</li>
-    <li>Portfolio demonstrating design skills and experience</li>
-    <li>Experience with design tools such as Figma, Sketch, or Adobe Creative Suite</li><!-- referenced to vscode copilot -->
-    <i>Bonus:</i>
-    <li>Strong understanding of user-centered design principles and best practices</li>
-    <li>Ability to work in a collaborative team environment</li>
-    <li>Strong communication skills, both written and verbal</li>
 
-</ul>
-<ul><strong>Junior Engine Programmer:</strong><!-- sourced from indeed.com -->
-    <li>Bachelor's degree in Computer Science or related field</li>
-    <li>Proficiency in C++ and C# </li>
-    <li>Experience with Unity or Unreal Engine</li>
-    <i>Bonus:</i>
-    <li>Experience with modern graphics API's (Vulkan, D3D12, GNM)</li><!-- sourced from indeed.com -->
-    <li>Excellent communication and teamwork abilities</li>
-    <li>Experience with both frontend and backend technologies</li>
-</ul>
-<ul><strong>DevOps Engineer:</strong>
-    <li>Bachelor's degree in Computer Science or related field</li>
-    <li>Experience with cloud platforms such as AWS, Azure, or GCP</li><!-- referenced to vscode copilot -->
-    <li>Proficiency in automation tools and scripting languages</li>
-    <i>Bonus:</i>
-    <li>Strong understanding of DevOps principles and practices</li>
-    <li>Excellent communication and teamwork abilities</li>
-    <li>Experience with containerization technologies such as Docker and Kubernetes</li><!-- referenced to vscode copilot -->
-</ul>
-</ol>
-</section>
-<aside id="benefits"><!-- benefits aside element -->
-<h2>Benefits</h2>
-<ol>
-    <li>Competitive salary and benefits package</li>
-    <li>Opportunities for professional development and growth for you career</li>
-    <li>Flexible work schedule and remote work options</li>
-    <li>EPF contribution</li>
-    <li>Generous company allowance and insurance coverage</li>
-    <li>Collaborative and inclusive work environment</li>
-    <li>Good accessibility to company resources and facilities</li>
-    <li>Employee recognition and rewards programs</li>
-</ol>
-</aside>
+<body>
+
+    <header>
+            <div class="header-content">
+                <a href="index.html" class="logo-link">
+                    <img src="images/Logo.png" alt="GameX Studios Logo" class="logo">
+                    <div class="brand-text">
+                </a>
+            </div>
+            
+            <nav aria-label="Main Navigation">
+                <ul class="nav-menu">
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="positions.html">Job Positions</a></li>
+                    <li><a href="apply.html">Job Application</a></li>
+                </ul>
+            </nav>
+        </header>
+
+    <nav class="jobs">
+        <span class="menu"><a href="#heading">Company Description</a></span>
+        <span class="menu"><a href="#position">Positions Available</a></span>
+        <span class="menu"><a href="#requirements">Job Requirements</a></span>
+        <span class="menu"><a href="#benefits">Benefits</a></span>
+    </nav>
+
+    
+        <h1>Company Description</h1>
+        <h2>Our Mission:</h2>
+        <p>We are an indie game studio dedicated to creating innovative and engaging gaming experiences. We are looking for skilled and motivated individuals to join our team.</p>
+        <h2>Why we need you:</h2>
+        <p>We have available positions that involve designing, developing, and maintaining the fundamental aspects of our titles, as well as collaborating with diverse work-teams to deliver high-quality products.</p>
+        <h2>Why you should join us:</h2>
+        <p>If you are passionate about game development and eager to contribute to innovative projects, we encourage you to apply for this exciting opportunity. Join our dynamic team and help us shape the future of indie games development!</p>
+   
+
+    <section id="position">
+        <h2>Positions</h2>
+        <ol>
+            <li>
+                <ul>
+                    <i>Junior UI/UX Designer:</i> 
+                    <li class="a">Design the artistic elements and user interfaces for our game titles.</li>
+                    <li class="b">Reference No.: UI011</li>
+                    <li class="c">As a UI/UX Designer, you will be responsible for creating intuitive and engaging user interfaces for our game titles.</li>
+                    <li class="d">Salary: $50,000 - $70,000 per year</li>
+                    <li class="e">Reporting line: Lead UI/UX Director</li>
+                </ul>
+            </li>
+            <hr>
+            <li>
+                <ul>
+                    <i>Junior Engine Programmer:</i>
+                    <li class="a">A position working on the development and maintenance of our game engine.</li>
+                    <li class="b">Reference No.: JP020</li>
+                    <li class="c">Writing performant, robust, and maintainable code, and debugging/profiling code.</li>
+                    <li class="d">Salary: $60,000 - $80,000 per year</li>
+                    <li class="e">Reporting line: Lead Engine Programmer</li>
+                </ul>
+            </li>
+            <hr>
+            <li>
+                <ul>
+                    <i>DevOps Engineer:</i>
+                    <li class="a">Managing the infrastructure and deployment processes of our games.</li>
+                    <li class="b">Reference No.: DO130</li>
+                    <li class="c">Working closely with development teams to ensure applications are deployed efficiently.</li>
+                    <li class="d">Salary: $85,000 - $110,000 per year</li>
+                    <li class="e">Reporting line: Product Manager</li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+
+    <section id="requirements">
+        <h2>Job Requirements</h2>
+        <ul>
+            <strong>Junior UI/UX Designer:</strong>
+            <li>Proven experience as a UI/UX Designer or similar role</li>
+            <li>Portfolio demonstrating design skills and experience</li>
+            <li>Experience with Figma, Sketch, or Adobe Creative Suite</li>
+            <i>Bonus:</i>
+            <li>User-centered design principles knowledge</li>
+        </ul>
+        <ul>
+            <strong>Junior Engine Programmer:</strong>
+            <li>Bachelor's degree in Computer Science or related field</li>
+            <li>Proficiency in C++ and C#</li>
+            <li>Experience with Unity or Unreal Engine</li>
+            <i>Bonus:</i>
+            <li>Experience with modern graphics APIs (Vulkan, D3D12)</li>
+        </ul>
+        <ul>
+            <strong>DevOps Engineer:</strong>
+            <li>Bachelor's degree in Computer Science or related field</li>
+            <li>Experience with AWS, Azure, or GCP</li>
+            <li>Proficiency in automation tools and scripting</li>
+            <i>Bonus:</i>
+            <li>Understanding of Docker and Kubernetes</li>
+        </ul>
+    </section>
+
+    <aside id="benefits">
+        <h2>Benefits</h2>
+        <ol>
+            <li>Competitive salary and benefits package</li>
+            <li>Opportunities for professional development</li>
+            <li>Flexible work schedule and remote options</li>
+            <li>EPF contribution</li>
+            <li>Insurance coverage and allowances</li>
+            <li>Inclusive work environment</li>
+        </ol>
+    </aside>
+
+    <footer>
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <p><strong>GameX Studios</strong></p>
+                    <p>Kuala Lumpur, Selangor, Malaysia</p>
+                </div>
+                <div class="footer-links-container">
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/GameXStudios">GitHub</a></li>
+                        <li><a href="https://jira.GameXStudios.com">Jira</a></li>
+                        <li><a href="mailto:info@GameXStudios.com">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2026 GameX Studios. All rights reserved.</p>
+        </footer>
+
 </body>
-<footer><!-- footer section -->
-    <div>To apply for any of the positions listed above, please submit your resume and cover letter to our Human Resources department at application@gamexstudios.com</div>
-    <div>We look forward to reviewing your application and potentially welcoming you to our team!</div>
-    <div>&copy; 2026 GameX Studios. All rights reserved.</div>
-</footer>
-
 </html>
