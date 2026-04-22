@@ -5,6 +5,44 @@
   <meta charset="UTF-8">
   <title>The Connected Random Team Profile</title>
   <style>
+    /*Timetable */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      vertical-align: top;
+    }
+
+    td ul {
+      list-style-type: none;
+      /* no dots */
+      padding-left: 0;
+      /* remove left indent */
+      margin: 0;
+      /* remove extra spacing */
+    }
+
+    td li {
+      margin-bottom: 4px;
+      /* tighter spacing between items */
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    ul {
+      margin: 0;
+      padding: 20px;
+    }
+
+
     /* Student IDs aligned right */
     .student-heading {
       text-align: right;
@@ -162,22 +200,103 @@
 
   <!-- Group Info -->
   <h2>Team Profile</h2>
-  <ul>
-    <li>The Connected Random
-      <ul>
-        <li>Class Day: Tuesday
+  <h3> The Connected Random </h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>Schedule</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Monday</td>
+        <td>
           <ul>
-            <li>Time: 2–4 PM</li>
+            <li>12:00 PM – 2:00 PM
+              <ul>
+                <li>Computer System</li>
+              </ul>
+            </li>
+            <li>4:00 PM – 6:00 PM
+              <ul>
+                <li>Introduction to Programming</li>
+              </ul>
+            </li>
           </ul>
-        </li>
-        <li>Class Day: Wednesday
+        </td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>
           <ul>
-            <li>Time: 8–10 AM</li>
+            <li>8:00 AM – 10:00 AM
+              <ul>
+                <li>Mathematic</li>
+              </ul>
+            </li>
+            <li>12:00 PM – 2:00 PM
+              <ul>
+                <li>Introduction to Programming</li>
+              </ul>
+            </li>
+            <li>2:00 PM – 4:00 PM
+              <ul>
+                <li>Web Technology Project</li>
+              </ul>
+            </li>
           </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>
+          <ul>
+            <li>8:00 AM – 10:00 AM
+              <ul>
+                <li>Web Technology Project</li>
+              </ul>
+            </li>
+            <li>10:00 AM – 12:00 PM
+              <ul>
+                <li>Computer System</li>
+              </ul>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td>
+          <ul>
+            <li>3:00 PM – 6:00 PM
+              <ul>
+                <li>Networking and Switching</li>
+              </ul>
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>
+          <ul>
+            <li>8:00 AM – 10:00 AM
+              <ul>
+                <li>Mathematic</li>
+              </ul>
+            </li>
+            <li>11:00 AM – 1:00 PM
+              <ul>
+                <li>Networking and Switching</li>
+              </ul>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
 
 
   <!-- Member Contributions -->
