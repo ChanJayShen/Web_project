@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Set fixed margin and padding */
 }
 
 body {
@@ -33,8 +33,8 @@ header {
 }
 
 .logo {
-    height: 50px;
-    width: auto;
+    height: 150px;
+    width: 200px;
 }
 
 .nav-menu {
