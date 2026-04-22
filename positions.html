@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="description" content="Job description" />
@@ -15,12 +16,12 @@
         .menu a { text-decoration: none; color: #333; }
         .menu a:hover { color: #3b82f6; }
         
-        h1, h2, p { text-decoration: underline; text-align: center; }
+        h1, h2 { text-decoration: underline; text-align: center; }
         
         .a, .b, .c, .d, .e { text-indent: 5%; text-align: justify; margin-bottom: 5px; }
         
     
-        ol { list-style-type: decimal; } 
+        ol { list-style-type: decimal; }
         
         section, aside { margin-top: 30px; }
         hr { border: 0; border-top: 1px solid #ccc; margin: 20px 0; }
@@ -29,25 +30,24 @@
    
 </head>
 
-<body>
+<body id="pos">
 
     <header>
-            <div class="header-content">
-                <a href="index.html" class="logo-link">
-                    <img src="images/Logo.png" alt="GameX Studios Logo" class="logo">
-                    <div class="brand-text">
-                </a>
-            </div>
-            
-            <nav aria-label="Main Navigation">
-                <ul class="nav-menu">
-                    <li><a href="index.html" aria-current="page">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="positions.html">Job Positions</a></li>
-                    <li><a href="apply.html">Job Application</a></li>
-                </ul>
-            </nav>
-        </header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="images/Logo.png" alt="GameX Studios Logo" class="logo">
+            </a>
+        </div>
+
+        <nav aria-label="Main Navigation">
+            <ul class="nav-menu">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="positions.html">Job Positions</a></li>
+                <li><a href="apply.html">Job Application</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <nav class="jobs">
         <span class="menu"><a href="#description">Company Description</a></span>
@@ -56,7 +56,7 @@
         <span class="menu"><a href="#benefits">Benefits</a></span>
     </nav>
 
-    <section id="description">
+    
         <h1>Company Description</h1>
         <h2>Our Mission:</h2>
         <p>We are an indie game studio dedicated to creating innovative and engaging gaming experiences. We are looking for skilled and motivated individuals to join our team.</p>
@@ -64,41 +64,43 @@
         <p>We have available positions that involve designing, developing, and maintaining the fundamental aspects of our titles, as well as collaborating with diverse work-teams to deliver high-quality products.</p>
         <h2>Why you should join us:</h2>
         <p>If you are passionate about game development and eager to contribute to innovative projects, we encourage you to apply for this exciting opportunity. Join our dynamic team and help us shape the future of indie games development!</p>
-    </section>
+   
 
     <section id="position">
         <h2>Positions</h2>
-        <ol>
+        <ol class="ordered">
             <li>
                 <ul>
-                    <i>Junior UI/UX Designer:</i> 
-                    <li class="a">Design the artistic elements and user interfaces for our game titles.</li>
-                    <li class="b">Reference No.: UI011</li>
-                    <li class="c">As a UI/UX Designer, you will be responsible for creating intuitive and engaging user interfaces for our game titles.</li>
-                    <li class="d">Salary: $50,000 - $70,000 per year</li>
-                    <li class="e">Reporting line: Lead UI/UX Director</li>
+                    <i>Junior UI/UX Designer:</i>
+                    <li>Design the artistic elements and user interfaces for our game titles.</li>
+                    <li>Reference No.: UI011</li>
+                    <li>As a UI/UX Designer, you will be responsible for creating intuitive and engaging user
+                        interfaces for our game titles.</li>
+                    <li>Salary: $50,000 - $70,000 per year</li>
+                    <li>Reporting line: Lead UI/UX Director</li>
                 </ul>
             </li>
             <hr>
             <li>
                 <ul>
                     <i>Junior Engine Programmer:</i>
-                    <li class="a">A position working on the development and maintenance of our game engine.</li>
-                    <li class="b">Reference No.: JP020</li>
-                    <li class="c">Writing performant, robust, and maintainable code, and debugging/profiling code.</li>
-                    <li class="d">Salary: $60,000 - $80,000 per year</li>
-                    <li class="e">Reporting line: Lead Engine Programmer</li>
+                    <li>A position working on the development and maintenance of our game engine.</li>
+                    <li>Reference No.: JP020</li>
+                    <li>Writing performant, robust, and maintainable code, and debugging/profiling code.</li>
+                    <li>Salary: $60,000 - $80,000 per year</li>
+                    <li>Reporting line: Lead Engine Programmer</li>
                 </ul>
             </li>
             <hr>
             <li>
                 <ul>
                     <i>DevOps Engineer:</i>
-                    <li class="a">Managing the infrastructure and deployment processes of our games.</li>
-                    <li class="b">Reference No.: DO130</li>
-                    <li class="c">Working closely with development teams to ensure applications are deployed efficiently.</li>
-                    <li class="d">Salary: $85,000 - $110,000 per year</li>
-                    <li class="e">Reporting line: Product Manager</li>
+                    <li>Managing the infrastructure and deployment processes of our games.</li>
+                    <li>Reference No.: DO130</li>
+                    <li>Working closely with development teams to ensure applications are deployed
+                        efficiently.</li>
+                    <li>Salary: $85,000 - $110,000 per year</li>
+                    <li>Reporting line: Product Manager</li>
                 </ul>
             </li>
         </ol>
@@ -160,4 +162,6 @@
             </div>
             <p class="copyright">&copy; 2026 GameX Studios. All rights reserved.</p>
         </footer>
+
+</body>
 </html>

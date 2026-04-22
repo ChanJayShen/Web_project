@@ -1,104 +1,8 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 
 <head>
-    <style>
-       /* Container styling */
-form {
-    width: 40%;
-    margin: 60px auto;
-    padding: 30px;
-    border: 2px solid black;
-    border-radius: 10px;
-}
-
-/* Make labels block elements so they sit above inputs */
-label {
-    display: block;
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.name-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /*Just like 50% and 50%*/
-    gap: 20px; 
-}
-
-/* Style the text inputs, selects, and textareas */
-input[type="text"],
-input[type="email"],
-input[type="date"],
-textarea {
-    width: 97%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-input[type="text"]:hover,
-input[type="email"]:hover,
-input[type="date"]:hover,
-textarea:hover {
-    background-color: lightblue;
-}
-
-select {
-    width: 101%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-select:hover {
-    background-color: lightblue;
-}
-
-/* Fieldset styling for Gender and Skill */
-fieldset {
-    width: 95%;
-    margin-top: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 10px 15px;
-}
-
-fieldset:hover {
-    background-color: lightblue;
-}
-
-
-.Skill {
-    margin-bottom: -10px;
-}
-
-/* Inline labels for radios/checkboxes (they shouldn't be block level) */
-fieldset label {
-    display: inline-block;
-    margin-top: 0;
-    font-weight: normal;
-}
-
-/* Submit Button */
-input[type="submit"] {
-    background-color: darkblue;
-    color: white;
-    width: 100%;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 20px;
-    font-size: 17px;
-}
-
-input[type="submit"]:hover {
-    background-color: rgb(42, 42, 255);
-    color: black;
-}
-    </style>
-    <meta charset = "utf-8">
+    <meta charset="utf-8">
     <meta name="description" content="Job application form">
     <meta name="keywords" content="Job application, User information">
     <meta name="author" content="Joseph">
@@ -106,26 +10,26 @@ input[type="submit"]:hover {
     <title> Job application form </title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
+
 <body>
     <header>
-            <div class="header-content">
-                <a href="index.html" class="logo-link">
-                    <img src="images/Logo.png" alt="GameX Studios Logo" class="logo">
-                    <div class="brand-text">
-                </a>
-            </div>
-            
-            <nav aria-label="Main Navigation">
-                <ul class="nav-menu">
-                    <li><a href="index.html" aria-current="page">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="positions.html">Job Positions</a></li>
-                    <li><a href="apply.html">Job Application</a></li>
-                </ul>
-            </nav>
-        </header>
+        <div class="header-content">
+            <a href="index.html" class="logo-link">
+                <img src="images/Logo.png" alt="GameX Studios Logo" class="logo">
+            </a>
+        </div>
 
-    <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
+        <nav aria-label="Main Navigation">
+            <ul class="nav-menu">
+                <li><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="positions.html">Job Positions</a></li>
+                <li><a href="apply.html">Job Application</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form method="post" action="https://mercury.swin.edu.au/it000000/formtest.php" id="forms">
         <h1>Application form</h1>
         <label for="Job_ref_num">Job reference number</label>
         <input type="text" name="Job_ref_num" id="Job_ref_num" required pattern="[a-zA-z0-9]{5}">
@@ -178,18 +82,18 @@ input[type="submit"]:hover {
         <label for="P_num">Phone number</label>
         <input type="text" name="P_num" id="P_num" required pattern="[0-9\-]{8,12}" placeholder="eg.012-3456789">
         <br>
-        
+
         <fieldset class="Skill">
             <legend><strong>Skill</strong></legend>
-            <input type="checkbox" name="Skill[]" id="Math_foun" value="Math foundation" checked >
-            <label for="Math_foun">Mathematical foundations</label> 
-            <input type="checkbox" name="Skill[]" id="Game_engine" value="Game engine proficiency" >
-            <label for="Game_engine">Game engine proficiency</label>
-            <input type="checkbox" name="Skill[]" id="S_thinking" value="Systemic Thinking" >
-            <label for="S_thinking">Systemic Thinking</label><br>
-            <input type="checkbox" name="Skill[]" id="Rapid_proto" value="Rapid Prototyping" >
+            <input type="checkbox" name="Skill[]" id="Math_foun" value="Math foundation" checked>
+            <label for="Math_foun">Mathematical foundations</label>
+            <input type="checkbox" name="Skill[]" id="Game_engine" value="Game engine proficiency">
+            <label for="Game_engine">Game engine proficiency</label><br>
+            <input type="checkbox" name="Skill[]" id="S_thinking" value="Systemic Thinking">
+            <label for="S_thinking">Systemic Thinking</label>
+            <input type="checkbox" name="Skill[]" id="Rapid_proto" value="Rapid Prototyping">
             <label for="Rapid_proto">Rapid Prototyping</label>
-            <input type="checkbox" name="Skill[]" id="Others" value=" and others..." >
+            <input type="checkbox" name="Skill[]" id="Others" value=" and others...">
             <label for="Others">Other skills</label>
         </fieldset>
         <br>
@@ -198,24 +102,25 @@ input[type="submit"]:hover {
         </label>
 
 
-        <input type="submit" value="Submit form" >
+        <input type="submit" value="Submit form">
     </form>
 
     <footer>
-            <div class="footer-grid">
-                <div class="footer-info">
-                    <p><strong>GameX Studios</strong></p>
-                    <p>Kuala Lumpur, Selangor, Malaysia</p>
-                </div>
-                <div class="footer-links-container">
-                    <ul class="footer-links">
-                        <li><a href="https://github.com/GameXStudios">GitHub</a></li>
-                        <li><a href="https://jira.GameXStudios.com">Jira</a></li>
-                        <li><a href="mailto:info@GameXStudios.com">Contact Us</a></li>
-                    </ul>
-                </div>
+        <div class="footer-grid">
+            <div class="footer-info">
+                <p><strong>GameX Studios</strong></p>
+                <p>Kuala Lumpur, Selangor, Malaysia</p>
             </div>
-            <p class="copyright">&copy; 2026 GameX Studios. All rights reserved.</p>
-        </footer>
+            <div class="footer-links-container">
+                <ul class="footer-links">
+                    <li><a href="https://github.com/GameXStudios">GitHub</a></li>
+                    <li><a href="https://jira.GameXStudios.com">Jira</a></li>
+                    <li><a href="mailto:info@GameXStudios.com">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2026 GameX Studios. All rights reserved.</p>
+    </footer>
 </body>
+
 </html>
