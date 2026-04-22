@@ -96,22 +96,28 @@
     .profile-pic {
       width: 150px;
       height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center top;
-      margin-top: -5px;
+      object-fit: cover;  /* fill the circle without stretching */
+      object-position: center top;   /* show the top part (face) in the circle */
+      margin-top: -5px;  /* move the picture up a little */
     }
 
     .member.left img {
       float: left;
+      /* pushes the image to the left side of the text block */
       clip-path: circle(40%);
+      /* visually crops the image into a circular shape */
       shape-outside: circle(45%);
+      /* makes surrounding text wrap around the circular boundary */
     }
+
 
     .member.right img {
       float: right;
+      /* pushes the image to the right side of the text block */
       clip-path: circle(40%);
+      /* visually crops the image into a circular shape */
       shape-outside: circle(45%);
+      /* makes surrounding text wrap around the circular boundary */
     }
 
     .member.right {
@@ -155,12 +161,12 @@
 
     tr:nth-child(even) {
       background-color: white;
-      /* soft green */
+      /* white */
     }
 
     tr:nth-child(odd) {
       background-color: white;
-      /* soft red */
+      /* white */
     }
 
     tr:hover {
