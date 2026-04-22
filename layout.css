@@ -25,11 +25,12 @@ header {
     z-index: 1000;
 }
 
-.logo-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    gap: 15px;
+/* --- FOOTER STYLING --- */
+footer {
+    background-color: #1a1a1a;
+    color: #efefef;
+    padding: 40px 5% 20px;
+    margin-top: 50px;
 }
 
 .logo {
@@ -44,7 +45,7 @@ header {
 }
 
 .nav-menu a {
-    text-decoration: none;
+    text-decoration: none; /* Remove the underline of four tabs */
     color: #333;
     font-weight: 600;
     transition: color 0.3s;
@@ -56,33 +57,33 @@ header {
 
 /* --- VIDEO HERO SECTION (Index Page Only) --- */
 .hero {
-    position: relative;
-    height: 60vh;
+    position: relative; /* Creates boundary for background video */
+    height: 70vh; /* hero section takes up 70% of the user's screen */
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    overflow: hidden;
+    align-items: center; /* Vertical centered */
+    justify-content: center; /* Horizontal centered */
+    color: white; /* White text color */
+    overflow: hidden; /* Crop the extra live background at the side */
     text-align: center;
 }
 
 #bg-video {
-    position: absolute;
+    position: absolute; /* Remove video and change to float */
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%); /* Move the background to the center */
     min-width: 100%;
-    min-height: 100%;
+    min-height: 100%; /* Ensure the whole background fits the hero section */
     width: auto;
     height: auto;
-    z-index: -1;
-    transform: translate(-50%, -50%);
+    z-index: -1; /* Pushes background to the very end */
     object-fit: cover;
 }
 
 /* Dark overlay to make text readable over video */
 .hero::after {
     content: "";
-    position: absolute;
+    position: absolute; 
     top: 0;
     left: 0;
     width: 100%;
@@ -107,19 +108,11 @@ header {
     font-weight: bold;
 }
 
-/* --- FOOTER STYLING --- */
-footer {
-    background-color: #1a1a1a;
-    color: #efefef;
-    padding: 40px 5% 20px;
-    margin-top: 50px;
-}
-
 .footer-grid {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    border-bottom: 1px solid #444;
+    flex-wrap: wrap; /* Ensure it appears nice and clear in mobile devices like phone */
+    border-bottom: 1px solid #444; /* Create a grey line as seperation */
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
