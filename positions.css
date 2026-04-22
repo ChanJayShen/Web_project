@@ -33,13 +33,11 @@ section {min-width: 30em;}
 #position {float:left; clear:left;}
 #requirements {float:right; clear:right;}
 
-#position, #benefits, #requirements {width: 50%; text-align: center;}
+#description, #position, #benefits, #requirements {width: 50%; text-align: center;}
 
-ol, ul, dl {text-align: left;}
+ol, ul, dl {text-align: center;}
 
 footer {border-top: 4px double darkgray; clear: both; text-align: center; margin-top: 20px; font-size: 12px; padding-top: 10px; }
-
-article {min-width:30em;}
 
 footer p {display:inline-block; width:33%}
 
