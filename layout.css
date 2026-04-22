@@ -2,12 +2,14 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Set fixed margin and padding */
+    box-sizing: border-box;
+    /* Set fixed margin and padding */
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6; /* spacing between each line is 1.6 times higher than each column */
+    line-height: 1.6;
+    /* spacing between each line is 1.6 times higher than each column */
     color: #333;
     background-color: #f4f4f4;
 }
@@ -15,14 +17,17 @@ body {
 /* --- HEADER STYLING --- */
 header {
     background-color: #fff;
-    padding: 1rem 5%;
+    padding: 0px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Add a shadow beneath the box */
-    position: sticky; /* Makes header stay at the top when scrolling */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Add a shadow beneath the box */
+    position: sticky;
+    /* Makes header stay at the top when scrolling */
     top: 0;
-    z-index: 1000; /* Keeps header above all other page content */
+    z-index: 1000;
+    /* Keeps header above all other page content */
 }
 
 /* --- FOOTER STYLING --- */
@@ -33,6 +38,11 @@ footer {
     margin-top: 50px;
 }
 
+
+
+
+
+/* --- INDEX.HTML PAGE --- */
 .logo {
     height: 150px;
     width: 200px;
@@ -45,45 +55,58 @@ footer {
 }
 
 .nav-menu a {
-    text-decoration: none; /* Remove the underline of four tabs */
+    text-decoration: none;
+    /* Remove the underline of four tabs */
     color: #333;
     font-weight: 600;
-    transition: color 0.3s; /* Smooth color change upon hovering */
+    transition: color 0.3s;
+    /* Smooth color change upon hovering */
 }
 
 .nav-menu a:hover {
-    color: #3b82f6; /* Modern Blue accent */
+    color: #3b82f6;
+    /* Modern Blue accent */
 }
 
 /* --- VIDEO HERO SECTION (Index Page Only) --- */
 .hero {
-    position: relative; /* Creates boundary for background video */
-    height: 70vh; /* hero section takes up 70% of the user's screen */
+    position: relative;
+    /* Creates boundary for background video */
+    height: 70vh;
+    /* hero section takes up 70% of the user's screen */
     display: flex;
-    align-items: center; /* Vertical centered */
-    justify-content: center; /* Horizontal centered */
-    color: white; /* White text color */
-    overflow: hidden; /* Crop the extra live background at the side */
+    align-items: center;
+    /* Vertical centered */
+    justify-content: center;
+    /* Horizontal centered */
+    color: white;
+    /* White text color */
+    overflow: hidden;
+    /* Crop the extra live background at the side */
     text-align: center;
 }
 
 #bg-video {
-    position: absolute; /* Remove video and change to float */
+    position: absolute;
+    /* Remove video and change to float */
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Move the background to the center */
+    transform: translate(-50%, -50%);
+    /* Move the background to the center */
     min-width: 100%;
-    min-height: 100%; /* Ensure the whole background fits the hero section */
+    min-height: 100%;
+    /* Ensure the whole background fits the hero section */
     width: auto;
     height: auto;
-    z-index: -1; /* Pushes background to the very end */
+    z-index: -1;
+    /* Pushes background to the very end */
     object-fit: cover;
 }
 
 /* Dark overlay to make text readable over video */
 .hero::after {
     content: "";
-    position: absolute; 
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -111,8 +134,10 @@ footer {
 .footer-grid {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; /* Ensure it appears nice and clear in mobile devices like phone */
-    border-bottom: 1px solid #444; /* Create a grey line as seperation */
+    flex-wrap: wrap;
+    /* Ensure it appears nice and clear in mobile devices like phone */
+    border-bottom: 1px solid #444;
+    /* Create a grey line as seperation */
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
@@ -139,4 +164,337 @@ footer {
     color: #777;
 }
 
+
+
+
+
 /* --- ABOUT.HTML PAGE --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.first_table th,
+.first_table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.first_table td ul {
+    list-style-type: none;
+    /* no dots */
+    padding-left: 0;
+    /* remove left indent */
+    margin: 0;
+    /* remove extra spacing */
+    text-align: center;
+}
+
+.first_table td li {
+    margin-bottom: 4px;
+    /* tighter spacing between items */
+}
+
+.first_table th {
+    background-color: #f2f2f2;
+}
+
+.first_table ul {
+    margin: 0;
+    padding: 20px;
+}
+
+
+/* Student IDs aligned right */
+.student-heading {
+    text-align: right;
+    /* moves the heading text to the right */
+    margin-right: 20px;
+    /* optional: adds spacing from the edge */
+}
+
+.student-id {
+    text-align: right;
+    font-style: italic;
+    color: #333333;
+}
+
+/* Group photo with border */
+figure {
+    border: 5px solid #333;
+    /* adds a border around the figure */
+    padding: 10px;
+    /* space between border and photo */
+    margin: 20px auto;
+    /* centers the figure */
+    background-color: #f9f9f9;
+    /* optional background */
+    width: fit-content;
+    /* keeps border tight around image */
+}
+
+
+figure img {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+figcaption {
+    text-align: center;
+}
+
+/* Member contributions */
+.member {
+    border: 3px solid #000000;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    /* fill the circle without stretching */
+    object-position: center top;
+    /* show the top part (face) in the circle */
+    margin-top: -5px;
+    /* move the picture up a little */
+}
+
+.member.left img {
+    float: left;
+    /* pushes the image to the left side of the text block */
+    clip-path: circle(40%);
+    /* visually crops the image into a circular shape */
+    shape-outside: circle(45%);
+    /* makes surrounding text wrap around the circular boundary */
+}
+
+
+.member.right img {
+    float: right;
+    /* pushes the image to the right side of the text block */
+    clip-path: circle(40%);
+    /* visually crops the image into a circular shape */
+    shape-outside: circle(45%);
+    /* makes surrounding text wrap around the circular boundary */
+}
+
+.member.right {
+    text-align: right;
+}
+
+dt {
+    font-weight: bold;
+    color: #004080;
+}
+
+dd {
+    margin-left: 1.5em;
+    margin-bottom: 0.3em;
+}
+
+/* Fun facts table */
+
+
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.second_table th {
+    font-weight: bold;
+    background-color: #e0e0e0;
+    border: 2px solid #333333;
+    padding: 20px;
+}
+
+.second_table td {
+    border: 2px solid #333333;
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: white;
+    /* white */
+}
+
+tr:nth-child(odd) {
+    background-color: white;
+    /* white */
+}
+
+tr:hover {
+    background-color: lightcyan;
+    /* light blue */
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+/* --- POSITION.HTML PAGE --- */
+nav.jobs {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.menu {
+    display: inline;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+.menu a:hover {
+    color: #3b82f6;
+}
+
+#pos h1,
+#pos h2 {
+    text-decoration: underline;
+    text-align: center;
+}
+
+#position {
+    text-indent: 5%;
+    text-align: justify;
+    margin-bottom: 5px;
+}
+
+
+.ordered {
+    list-style-type: decimal;
+}
+
+.requirement,
+.benefits {
+    margin-top: 30px;
+}
+
+.ordered {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+
+
+
+
+
+
+
+
+/* --- APPLY.HTML PAGE --- */
+#forms {
+    width: 40%;
+    margin: 60px auto;
+    padding: 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+/* Make labels block elements so they sit above inputs */
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.name-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /*Just like 50% and 50%*/
+    gap: 20px;
+}
+
+/* Style the text inputs, selects, and textareas */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea {
+    width: 97%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="date"]:hover,
+textarea:hover {
+    background-color: lightblue;
+}
+
+select {
+    width: 101%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+select:hover {
+    background-color: lightblue;
+}
+
+/* Fieldset styling for Gender and Skill */
+#forms fieldset {
+    width: 95%;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px 15px;
+}
+
+#forms fieldset:hover {
+    background-color: lightblue;
+}
+
+
+.Skill {
+    margin-bottom: -10px;
+}
+
+/* Inline labels for radios/checkboxes (they shouldn't be block level) */
+#forms fieldset label {
+    display: inline-block;
+    margin-top: 0;
+    font-weight: normal;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background-color: darkblue;
+    color: white;
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 17px;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(42, 42, 255);
+    color: black;
+}

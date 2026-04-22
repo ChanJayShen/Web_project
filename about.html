@@ -4,177 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <title>The Connected Random Team Profile</title>
-  <style>
-    /*Timetable */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-    }
-
-    th,
-    td {
-      border: 1px solid #ccc;
-      padding: 12px;
-      vertical-align: top;
-    }
-
-    td ul {
-      list-style-type: none;
-      /* no dots */
-      padding-left: 0;
-      /* remove left indent */
-      margin: 0;
-      /* remove extra spacing */
-    }
-
-    td li {
-      margin-bottom: 4px;
-      /* tighter spacing between items */
-    }
-
-    th {
-      background-color: #f2f2f2;
-    }
-
-    ul {
-      margin: 0;
-      padding: 20px;
-    }
-
-
-    /* Student IDs aligned right */
-    .student-heading {
-      text-align: right;
-      /* moves the heading text to the right */
-      margin-right: 20px;
-      /* optional: adds spacing from the edge */
-    }
-
-    .student-id {
-      text-align: right;
-      font-style: italic;
-      color: #333333;
-    }
-
-    /* Group photo with border */
-    figure {
-      border: 5px solid #333;
-      /* adds a border around the figure */
-      padding: 10px;
-      /* space between border and photo */
-      margin: 20px auto;
-      /* centers the figure */
-      background-color: #f9f9f9;
-      /* optional background */
-      width: fit-content;
-      /* keeps border tight around image */
-    }
-
-
-    figure img {
-      max-width: 300px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-
-    figcaption {
-      text-align: center;
-    }
-
-    /* Member contributions */
-    .member {
-      border: 3px solid #000000;
-      padding: 20px;
-      margin: 20px 0;
-      border-radius: 8px;
-      background-color: #f9f9f9;
-    }
-
-
-    .profile-pic {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;  /* fill the circle without stretching */
-      object-position: center top;   /* show the top part (face) in the circle */
-      margin-top: -5px;  /* move the picture up a little */
-    }
-
-    .member.left img {
-      float: left;
-      /* pushes the image to the left side of the text block */
-      clip-path: circle(40%);
-      /* visually crops the image into a circular shape */
-      shape-outside: circle(45%);
-      /* makes surrounding text wrap around the circular boundary */
-    }
-
-
-    .member.right img {
-      float: right;
-      /* pushes the image to the right side of the text block */
-      clip-path: circle(40%);
-      /* visually crops the image into a circular shape */
-      shape-outside: circle(45%);
-      /* makes surrounding text wrap around the circular boundary */
-    }
-
-    .member.right {
-      text-align: right;
-    }
-
-    dt {
-      font-weight: bold;
-      color: #004080;
-    }
-
-    dd {
-      margin-left: 1.5em;
-      margin-bottom: 0.3em;
-    }
-
-    /* Fun facts table */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-    }
-
-    caption {
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
-
-    th {
-      font-weight: bold;
-      background-color: #e0e0e0;
-      border: 2px solid #333333;
-      padding: 20px;
-    }
-
-    td {
-      border: 2px solid #333333;
-      padding: 10px;
-      text-align: center;
-    }
-
-    tr:nth-child(even) {
-      background-color: white;
-      /* white */
-    }
-
-    tr:nth-child(odd) {
-      background-color: white;
-      /* white */
-    }
-
-    tr:hover {
-      background-color: lightcyan;
-      /* light blue */
-      cursor: pointer;
-    }
-  </style>
   <link href="layout.css" rel="stylesheet">
 </head>
 
@@ -182,8 +11,7 @@
   <header>
     <div class="header-content">
       <a href="index.html" class="logo-link">
-        <img src="images/Logo.png" alt="GameX Studios Logo" class="logo">
-        <div class="brand-text">
+        <img src="images/Logo.png" alt="GameX Studios Logo" class="logo"> 
       </a>
     </div>
 
@@ -207,7 +35,8 @@
   <!-- Group Info -->
   <h2>Team Profile</h2>
   <h3> The Connected Random </h3>
-  <table>
+
+  <table class="first_table">
     <thead>
       <tr>
         <th>Day</th>
@@ -359,7 +188,8 @@
 
   <!-- Fun Facts Table -->
   <h2>Fun Facts</h2>
-  <table>
+
+  <table class="second_table">
     <caption>Team Fun Facts</caption>
     <tr>
       <th>Name</th>
