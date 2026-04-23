@@ -30,6 +30,11 @@ header {
     /* Keeps header above all other page content */
 }
 
+main {
+    width: 80%;
+    margin: 0px auto;
+}
+
 /* --- FOOTER STYLING --- */
 footer {
     background-color: #1a1a1a;
@@ -409,13 +414,14 @@ nav.jobs {
 
 /* --- APPLY.HTML PAGE --- */
 #forms {
-    width: 40%; /* Sets the form's width to 40% */
-    margin: 60px auto; /* 60px top/bottom spacing and center the box horizontally */
-    padding: 30px; /* Creates 30px space between the border and the content */
+    width: 90%;            /* On small screens, take up most of the width */
+    padding: 20px;
     border: 2px solid black;
-    /* Draws a 2px thick, continuous black line around the box */
+    margin: 40px auto;     /* Keep it centered */
+    max-width: 600px;      /* On big screens, stop growing at 600px so it doesn't look stretched */
+    min-width: 300px;      /* Never get smaller than 300px on a tiny phone */
     border-radius: 10px;
-    /* Curves the sharp corners of the box by 10 pixels */
+    box-sizing: border-box; /* Ensures padding doesn't add to the width */
 }
 
 /* Make labels block elements so they sit above inputs */
