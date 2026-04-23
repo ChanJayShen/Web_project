@@ -7,27 +7,7 @@
     <meta name="keywords" content="Job, Description, Positions, Requirements, Benefits" />
     <meta name="author" content="Human Resources" />
     <title>Job Description</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link href="layout.css" rel="stylesheet">
-    <style>
-        body { font-family: Arial, sans-serif;}
-        nav.jobs { background-color: #f4f4f4; padding: 10px; border-radius: 5px; }
-        .menu { display: inline; margin-right: 15px; font-weight: bold; }
-        .menu a { text-decoration: none; color: #333; }
-        .menu a:hover { color: #3b82f6; }
-        
-        h1, h2 { text-decoration: underline; text-align: center; }
-        
-        .a, .b, .c, .d, .e { text-indent: 5%; text-align: justify; margin-bottom: 5px; }
-        
-    
-        ol { list-style-type: decimal; }
-        
-        section, aside { margin-top: 30px; }
-        hr { border: 0; border-top: 1px solid #ccc; margin: 20px 0; }
-        
-    </style>
-   
+    <link href="layout.css" rel="stylesheet">  
 </head>
 
 <body id="pos">
@@ -51,21 +31,28 @@
 
     <main>
     <nav class="jobs">
+    <ul>
         <span class="menu"><a href="#description">Company Description</a></span>
         <span class="menu"><a href="#position">Positions Available</a></span>
         <span class="menu"><a href="#requirements">Job Requirements</a></span>
         <span class="menu"><a href="#benefits">Benefits</a></span>
+    </ul>
     </nav>
 
     
         <h1>Company Description</h1>
+        <aside class="mission">
         <h2>Our Mission:</h2>
-        <p>We are an indie game studio dedicated to creating innovative and engaging gaming experiences. We are looking for skilled and motivated individuals to join our team.</p>
+        <div>We are an indie game studio dedicated to creating innovative and engaging gaming experiences. We are looking for skilled and motivated individuals to join our team.</div>
+        </aside>
+        <aside class="needs">
         <h2>Why we need you:</h2>
-        <p>We have available positions that involve designing, developing, and maintaining the fundamental aspects of our titles, as well as collaborating with diverse work-teams to deliver high-quality products.</p>
+        <div>We have available positions that involve designing, developing, and maintaining the fundamental aspects of our titles, as well as collaborating with diverse work-teams to deliver high-quality products.</div>
+        </aside>
+        <aside class="vision">
         <h2>Why you should join us:</h2>
-        <p>If you are passionate about game development and eager to contribute to innovative projects, we encourage you to apply for this exciting opportunity. Join our dynamic team and help us shape the future of indie games development!</p>
-   
+        <div>If you are passionate about game development and eager to contribute to innovative projects, we encourage you to apply for this exciting opportunity. Join our dynamic team and help us shape the future of indie games development!</div>
+        </aside>
 
     <section id="position">
         <h2>Positions</h2>
@@ -146,7 +133,8 @@
             <li>Inclusive work environment</li>
         </ol>
     </aside>
-
+    </main>
+    
     <footer>
             <div class="footer-grid">
                 <div class="footer-info">
