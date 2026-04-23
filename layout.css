@@ -1,3 +1,17 @@
+/*
+
+filename: [layout.css]
+
+author: [Chan Jay Shen]
+
+created: [20/4/2026]
+
+last modified: [23/4/2026]
+
+description: [.css file for 4 html pages!]
+
+*/
+
 /* General Layout Settings */
 * {
     margin: 0;
@@ -255,7 +269,7 @@ figcaption {
 
 /* Member contributions */
 .member {
-    border: 3px solid #000000;
+    border: 0px solid #000000;
     padding: 20px;
     margin: 20px 0;
     border-radius: 8px;
@@ -344,6 +358,74 @@ tr:hover {
     cursor: pointer;
 }
 
+.member.right {
+    background: linear-gradient(to right, #7a7a7a 0%, #ffffff 100%);
+
+}
+
+.member.left {
+    background: linear-gradient(to left, #7a7a7a 0%, #ffffff 100%);
+
+}
+
+
+/* Animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(150px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 2. Apply to the Left-aligned members */
+.member.right {
+    view-timeline-name: --revealing-left;
+    view-timeline-axis: block;
+    
+    /* Animation triggers as it enters the view */
+    animation: slideInLeft linear forwards;
+    animation-timeline: --revealing-left;
+    animation-range: entry 10% cover 30%;
+}
+
+/* 3. Apply to the Right-aligned members */
+.member.left {
+    view-timeline-name: --revealing-right;
+    view-timeline-axis: block;
+    
+    /* Animation triggers as it enters the view */
+    animation: slideInRight linear forwards;
+    animation-timeline: --revealing-right;
+    animation-range: entry 10% cover 30%;
+}
+
+/* General styling to ensure the profile pics and info stay together during animation */
+.member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.member.right {
+    flex-direction: row-reverse; /* Flips the pic and text for right members */
+    text-align: right;
+}
 
 
 
