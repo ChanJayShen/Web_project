@@ -57,99 +57,6 @@ footer {
     margin-top: 50px;
 }
 
-
-
-
-
-/* --- INDEX.HTML PAGE --- */
-.logo {
-    height: 150px;
-    width: 200px;
-}
-
-.nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-menu a {
-    text-decoration: none;
-    /* Remove the underline of four tabs */
-    color: #333;
-    font-weight: 600;
-    transition: color 0.3s;
-    /* Smooth color change upon hovering */
-}
-
-.nav-menu a:hover {
-    color: #3b82f6;
-    /* Modern Blue accent */
-}
-
-/* --- VIDEO HERO SECTION (Index Page Only) --- */
-.hero {
-    position: relative;
-    height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    overflow: hidden;
-    text-align: center;
-}
-
-#bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    object-fit: cover;
-    pointer-events: none; /* Add this for better mobile compatibility */
-}
-
-.hero::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 0;
-}
-
-.hero-text {
-    position: relative;
-    z-index: 1;
-    width: 100%;      /* Ensures text takes up available space */
-    padding: 0 20px;  /* Prevents text from touching screen edges on mobile */
-}
-
-.cta-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 30px;
-    background-color: #ffcc00; /* A nice gold/yellow to contrast the dark video */
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    position: relative; 
-    z-index: 2; /* Ensures it stays clickable above everything else */
-}
-
-.cta-button:hover {
-    background-color: #e6b800;
-    transform: scale(1.05); /* Gives a slight "pop" when hovered */
-}
-
 .footer-grid {
     display: flex;
     justify-content: space-between;
@@ -182,6 +89,107 @@ footer {
     font-size: 0.9rem;
     color: #777;
 }
+
+
+
+
+
+/* --- INDEX.HTML PAGE --- */
+.logo {
+    height: 150px;
+    width: 200px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    /* Remove the underline of four tabs */
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+    /* Smooth color change upon hovering */
+}
+
+.nav-menu a:hover {
+    color: #3b82f6;
+    /* Modern Blue accent */
+}
+
+/* --- LIVE BACKGROUND --- */
+.hero {
+    position: relative;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+}
+
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+    pointer-events: none;
+    /* Add this for better mobile compatibility */
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    /* Ensures text takes up available space */
+    padding: 0 20px;
+    /* Prevents text from touching screen edges on mobile */
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #ffcc00;
+    /* A nice gold/yellow to contrast the dark video */
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    z-index: 2;
+    /* Ensures it stays clickable above everything else */
+}
+
+.cta-button:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+    /* Gives a slight "pop" when hovered */
+}
+
+
 
 
 
@@ -375,6 +383,7 @@ tr:hover {
         opacity: 0;
         transform: translateX(-150px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -386,6 +395,7 @@ tr:hover {
         opacity: 0;
         transform: translateX(150px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -396,7 +406,7 @@ tr:hover {
 .member.right {
     view-timeline-name: --revealing-left;
     view-timeline-axis: block;
-    
+
     /* Animation triggers as it enters the view */
     animation: slideInLeft linear forwards;
     animation-timeline: --revealing-left;
@@ -407,7 +417,7 @@ tr:hover {
 .member.left {
     view-timeline-name: --revealing-right;
     view-timeline-axis: block;
-    
+
     /* Animation triggers as it enters the view */
     animation: slideInRight linear forwards;
     animation-timeline: --revealing-right;
@@ -423,7 +433,8 @@ tr:hover {
 }
 
 .member.right {
-    flex-direction: row-reverse; /* Flips the pic and text for right members */
+    flex-direction: row-reverse;
+    /* Flips the pic and text for right members */
     text-align: right;
 }
 
@@ -439,7 +450,8 @@ nav.jobs {
     border-radius: 5px;
 }
 
-#position, #requirements {
+#position,
+#requirements {
     scroll-margin-top: 150px;
 }
 
@@ -458,21 +470,88 @@ nav.jobs {
     color: #3b82f6;
 }
 
-#pos h1,
-#pos h2 {
-    text-decoration: underline;
+/* Container for the side-by-side columns */
+.row-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Space between the boxes */
+    margin-top: 15px; /* Space between header and boxes */
+    margin-bottom: 40px;
+}
+
+/* Add border and equal width to the three sections */
+.mission, .needs, .vision {
+    flex: 1; /* Ensures equal width for all 3 boxes */
+    border: 3px dotted; /* Adds the requested border */
+    padding: 15px; /* Adds space so text doesn't touch the border */
+}
+
+
+/* Centers the boxes and adds space between them */
+.first_box {
+    border: 1.5px solid black;
+    border-radius: 20px;
+    width: 80%;
+    margin: 50px auto;
+    padding: 40px;
+    text-indent: 10px;
+}
+
+.first_box.box1 {
+    margin: 10px auto 50px auto;
+}
+
+.title {
     text-align: center;
+    margin-top: 55px;
 }
 
-#position {
-    text-indent: 5%;
-    text-align: justify;
-    margin-bottom: 5px;
+.job1-image {
+    float: right;
+    width: 200px;   /* Set a size so it doesn't take over the page */
+    height: auto;
+    margin-left: 40px; /* Keeps the text from touching the image */
+    margin-top: -7px;
+    border-radius: 10px;
 }
 
+.job2-image {
+    float: right;
+    width: 200px;   /* Set a size so it doesn't take over the page */
+    height: auto;
+    margin-left: 40px; /* Keeps the text from touching the image */
+    margin-top: 25px;
+    border-radius: 10px;
+}
 
-.ordered {
-    list-style-type: decimal;
+.job3-image {
+    float: right;
+    width: 200px;   /* Set a size so it doesn't take over the page */
+    height: auto;
+    margin-left: 40px; /* Keeps the text from touching the image */
+    margin-top: 22px;
+    border-radius: 10px;
+}
+
+.second_box {
+    border: 15px groove black;
+    border-radius: 5px;
+    width: 45%;
+    margin: 50px 0px;   
+    padding: 40px;
+    text-indent: 10px;
+    clear: left;
+}
+
+#benefits {
+    border: 4px inset darkblue;
+    border-radius: 14px;
+    width: 32%;
+    margin: -900px auto;
+    padding: 30px;
+    background:url(images/fade.jpg) repeat-x top left;
+    float: right;
+    box-shadow: 10px 10px 5px #aaaaaa;
 }
 
 .requirement,
@@ -496,14 +575,19 @@ nav.jobs {
 
 /* --- APPLY.HTML PAGE --- */
 #forms {
-    width: 90%;            /* On small screens, take up most of the width */
+    width: 90%;
+    /* On small screens, take up most of the width */
     padding: 20px;
     border: 2px solid black;
-    margin: 40px auto;     /* Keep it centered */
-    max-width: 600px;      /* On big screens, stop growing at 600px so it doesn't look stretched */
-    min-width: 300px;      /* Never get smaller than 300px on a tiny phone */
+    margin: 40px auto;
+    /* Keep it centered */
+    max-width: 600px;
+    /* On big screens, stop growing at 600px so it doesn't look stretched */
+    min-width: 300px;
+    /* Never get smaller than 300px on a tiny phone */
     border-radius: 10px;
-    box-sizing: border-box; /* Ensures padding doesn't add to the width */
+    box-sizing: border-box;
+    /* Ensures padding doesn't add to the width */
 }
 
 /* Make labels block elements so they sit above inputs */
