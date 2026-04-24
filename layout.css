@@ -190,6 +190,23 @@ footer {
 }
 
 
+.company-intro {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.text-block {
+    max-width: 800px;
+    text-align: center; /* Keeps headers and text centered */
+}
+
+.studio {
+    width: 300px;  /* Increase this number to make it bigger */
+    height: 250px;  /* Keeps the proportions perfect */
+}
+
+
 
 
 
@@ -446,13 +463,22 @@ tr:hover {
 /* --- POSITION.HTML PAGE --- */
 nav.jobs {
     background-color: #f4f4f4;
-    padding: 10px;
+    padding:0.2em 0.6em;
+    border: 4px solid #ccc;
     border-radius: 5px;
+    position: fixed;
+    top: 170px;
+    height: 40px;
+    z-index: 1000;
+}
+
+#description {
+    scroll-margin-top: 300px;
 }
 
 #position,
-#requirements {
-    scroll-margin-top: 150px;
+#requirements, #benefits {
+    scroll-margin-top: 225px;
 }
 
 .menu {
@@ -477,6 +503,7 @@ nav.jobs {
     gap: 20px; /* Space between the boxes */
     margin-top: 15px; /* Space between header and boxes */
     margin-bottom: 40px;
+    text-align: center;
 }
 
 /* Add border and equal width to the three sections */
@@ -537,11 +564,12 @@ nav.jobs {
     border: 15px groove black;
     border-radius: 5px;
     width: 45%;
+    min-width: 400px;
     margin: 50px 0px;   
     padding: 40px;
     text-indent: 10px;
-    clear: left;
 }
+
 
 #benefits {
     border: 4px inset darkblue;
@@ -549,7 +577,7 @@ nav.jobs {
     width: 32%;
     margin: -900px auto;
     padding: 30px;
-    background:url(images/fade.jpg) repeat-x top left;
+    background: lightskyblue;
     float: right;
     box-shadow: 10px 10px 5px #aaaaaa;
 }
