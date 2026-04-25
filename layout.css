@@ -30,7 +30,7 @@ body {
 
 /* --- HEADER STYLING --- */
 header {
-    background-color: #fff;
+    background-color: #f8f8f8;
     padding: 0px 5%;
     display: flex;
     justify-content: space-between;
@@ -95,11 +95,6 @@ footer {
 
 
 /* --- INDEX.HTML PAGE --- */
-.logo {
-    height: 150px;
-    width: 200px;
-}
-
 .nav-menu {
     list-style: none;
     display: flex;
@@ -134,7 +129,7 @@ footer {
 
 #bg-video {
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     min-width: 100%;
