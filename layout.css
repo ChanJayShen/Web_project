@@ -1,110 +1,52 @@
+/*
+
+filename: [layout.css]
+
+author: [Chan Jay Shen]
+
+created: [20/4/2026]
+
+last modified: [23/4/2026]
+
+description: [.css file for 4 html pages!]
+
+*/
+
 /* General Layout Settings */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Set fixed margin and padding */
+    box-sizing: border-box;
+    /* Set fixed margin and padding */
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
+    /* spacing between each line is 1.6 times higher than each column */
     color: #333;
     background-color: #f4f4f4;
 }
 
 /* --- HEADER STYLING --- */
 header {
-    background-color: #fff;
-    padding: 1rem 5%;
+    background-color: #f8f8f8;
+    padding: 0px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Add a shadow beneath the box */
     position: sticky;
+    /* Makes header stay at the top when scrolling */
     top: 0;
     z-index: 1000;
+    /* Keeps header above all other page content */
 }
 
-.logo-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    gap: 15px;
-}
-
-.logo {
-    height: 150px;
-    width: 200px;
-}
-
-.nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-menu a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-.nav-menu a:hover {
-    color: #3b82f6; /* Modern Blue accent */
-}
-
-/* --- VIDEO HERO SECTION (Index Page Only) --- */
-.hero {
-    position: relative;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    overflow: hidden;
-    text-align: center;
-}
-
-#bg-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -1;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-}
-
-/* Dark overlay to make text readable over video */
-.hero::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 0;
-}
-
-.hero-text {
-    position: relative;
-    z-index: 1;
-}
-
-.cta-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 30px;
-    background-color: #3b82f6;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+main {
+    width: 80%;
+    margin: 0px auto;
 }
 
 /* --- FOOTER STYLING --- */
@@ -119,7 +61,9 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    /* Ensure it appears nice and clear in mobile devices like phone */
     border-bottom: 1px solid #444;
+    /* Create a grey line as seperation */
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
@@ -144,4 +88,632 @@ footer {
     text-align: center;
     font-size: 0.9rem;
     color: #777;
+}
+
+
+
+
+
+/* --- INDEX.HTML PAGE --- */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    /* Remove the underline of four tabs */
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+    /* Smooth color change upon hovering */
+}
+
+.nav-menu a:hover {
+    color: #3b82f6;
+    /* Modern Blue accent */
+}
+
+/* --- LIVE BACKGROUND --- */
+.hero {
+    position: relative;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    overflow: hidden;
+    text-align: center;
+}
+
+#bg-video {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+    pointer-events: none;
+    /* Add this for better mobile compatibility */
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    /* Ensures text takes up available space */
+    padding: 0 20px;
+    /* Prevents text from touching screen edges on mobile */
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #ffcc00;
+    /* A nice gold/yellow to contrast the dark video */
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    z-index: 2;
+    /* Ensures it stays clickable above everything else */
+}
+
+.cta-button:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+    /* Gives a slight "pop" when hovered */
+}
+
+
+.company-intro {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.text-block {
+    max-width: 800px;
+    text-align: center; /* Keeps headers and text centered */
+}
+
+.studio {
+    width: 300px;  /* Increase this number to make it bigger */
+    height: 250px;  /* Keeps the proportions perfect */
+}
+
+
+
+
+
+
+
+/* --- ABOUT.HTML PAGE --- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.first_table th,
+.first_table td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.first_table td ul {
+    list-style-type: none;
+    /* no dots */
+    padding-left: 0;
+    /* remove left indent */
+    margin: 0;
+    /* remove extra spacing */
+    text-align: center;
+}
+
+.first_table td li {
+    margin-bottom: 4px;
+    /* tighter spacing between items */
+}
+
+.first_table th {
+    background-color: #f2f2f2;
+}
+
+.first_table ul {
+    margin: 0;
+    padding: 20px;
+}
+
+
+/* Student IDs aligned right */
+.student-heading {
+    text-align: right;
+    /* moves the heading text to the right */
+    margin-right: 20px;
+    /* optional: adds spacing from the edge */
+}
+
+.student-id {
+    text-align: right;
+    font-style: italic;
+    color: #333333;
+}
+
+/* Group photo with border */
+figure {
+    border: 5px solid #333;
+    /* adds a border around the figure */
+    padding: 10px;
+    /* space between border and photo */
+    margin: 20px auto;
+    /* centers the figure */
+    background-color: #f9f9f9;
+    /* optional background */
+    width: fit-content;
+    /* keeps border tight around image */
+}
+
+
+figure img {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+figcaption {
+    text-align: center;
+}
+
+/* Member contributions */
+.member {
+    border: px solid #000000;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    /* fill the circle without stretching */
+    object-position: center top;
+    /* show the top part (face) in the circle */
+    margin-top: -5px;
+    /* move the picture up a little */
+}
+
+.member.left img {
+    float: left;
+    /* pushes the image to the left side of the text block */
+    clip-path: circle(40%);
+    /* visually crops the image into a circular shape */
+    shape-outside: circle(45%);
+    /* makes surrounding text wrap around the circular boundary */
+}
+
+
+.member.right img {
+    float: right;
+    /* pushes the image to the right side of the text block */
+    clip-path: circle(40%);
+    /* visually crops the image into a circular shape */
+    shape-outside: circle(45%);
+    /* makes surrounding text wrap around the circular boundary */
+}
+
+.member.right {
+    text-align: right;
+}
+
+dt {
+    font-weight: bold;
+    color: #004080;
+}
+
+dd {
+    margin-left: 1.5em;
+    margin-bottom: 0.3em;
+}
+
+/* Fun facts table */
+
+
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.second_table th {
+    font-weight: bold;
+    background-color: #e0e0e0;
+    border: 2px solid #333333;
+    padding: 20px;
+}
+
+.second_table td {
+    border: 2px solid #333333;
+    padding: 10px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: white;
+    /* white */
+}
+
+tr:nth-child(odd) {
+    background-color: white;
+    /* white */
+}
+
+tr:hover {
+    background-color: lightcyan;
+    /* light blue */
+    cursor: pointer;
+}
+
+.member.right {
+    background: linear-gradient(to right, #7a7a7a 0%, #ffffff 100%);
+
+}
+
+.member.left {
+    background: linear-gradient(to left, #7a7a7a 0%, #ffffff 100%);
+
+}
+
+
+/* Animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-150px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(150px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 2. Apply to the Left-aligned members */
+.member.right {
+    view-timeline-name: --revealing-left;
+    view-timeline-axis: block;
+
+    /* Animation triggers as it enters the view */
+    animation: slideInLeft linear forwards;
+    animation-timeline: --revealing-left;
+    animation-range: entry 10% cover 30%;
+}
+
+/* 3. Apply to the Right-aligned members */
+.member.left {
+    view-timeline-name: --revealing-right;
+    view-timeline-axis: block;
+
+    /* Animation triggers as it enters the view */
+    animation: slideInRight linear forwards;
+    animation-timeline: --revealing-right;
+    animation-range: entry 10% cover 30%;
+}
+
+/* General styling to ensure the profile pics and info stay together during animation */
+.member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.member.right {
+    flex-direction: row-reverse;
+    /* Flips the pic and text for right members */
+    text-align: right;
+}
+
+
+
+
+
+
+/* --- POSITION.HTML PAGE --- */
+nav.jobs {
+    background-color: #f4f4f4;
+    padding:0.2em 0.6em;
+    border: 4px solid #ccc;
+    border-radius: 5px;
+    position: fixed;
+    top: 170px;
+    height: 40px;
+    z-index: 1000;
+}
+
+#description {
+    scroll-margin-top: 300px;
+}
+
+#position,
+#requirements, #benefits {
+    scroll-margin-top: 225px;
+}
+
+.menu {
+    display: inline;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+.menu a:hover {
+    color: #3b82f6;
+}
+
+/* Container for the side-by-side columns */
+.row-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Space between the boxes */
+    margin-top: 15px; /* Space between header and boxes */
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* Add border and equal width to the three sections */
+.mission, .needs, .vision {
+    flex: 1; /* Ensures equal width for all 3 boxes */
+    border: 3px dotted; /* Adds the requested border */
+    padding: 15px; /* Adds space so text doesn't touch the border */
+}
+
+
+/* Centers the boxes and adds space between them */
+.first_box {
+    border: 1.5px solid black;
+    border-radius: 20px;
+    width: 80%;
+    margin: 50px auto;
+    padding: 40px;
+    text-indent: 10px;
+}
+
+.first_box.box1 {
+    margin: 10px auto 50px auto;
+}
+
+.title {
+    text-align: center;
+    margin-top: 55px;
+}
+
+.job1-image {
+    float: right;
+    width: 200px;   /* Set a size so it doesn't take over the page */
+    height: auto;
+    margin-left: 40px; /* Keeps the text from touching the image */
+    margin-top: -7px;
+    border-radius: 10px;
+}
+
+.job2-image {
+    float: right;
+    width: 200px;   /* Set a size so it doesn't take over the page */
+    height: auto;
+    margin-left: 40px; /* Keeps the text from touching the image */
+    margin-top: 25px;
+    border-radius: 10px;
+}
+
+.job3-image {
+    float: right;
+    width: 200px;   /* Set a size so it doesn't take over the page */
+    height: auto;
+    margin-left: 40px; /* Keeps the text from touching the image */
+    margin-top: 22px;
+    border-radius: 10px;
+}
+
+.second_box {
+    border: 15px groove black;
+    border-radius: 5px;
+    width: 45%;
+    min-width: 400px;
+    margin: 50px 0px;   
+    padding: 40px;
+    text-indent: 10px;
+}
+
+
+#benefits {
+    border: 4px inset darkblue;
+    border-radius: 14px;
+    width: 32%;
+    margin: -900px auto;
+    padding: 30px;
+    background: lightskyblue;
+    float: right;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.requirement,
+.benefits {
+    margin-top: 30px;
+}
+
+.ordered {
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+
+
+
+
+
+
+
+
+/* --- APPLY.HTML PAGE --- */
+#forms {
+    width: 90%;
+    /* On small screens, take up most of the width */
+    padding: 20px;
+    border: 2px solid black;
+    margin: 40px auto;
+    /* Keep it centered */
+    max-width: 600px;
+    /* On big screens, stop growing at 600px so it doesn't look stretched */
+    min-width: 300px;
+    /* Never get smaller than 300px on a tiny phone */
+    border-radius: 10px;
+    box-sizing: border-box;
+    /* Ensures padding doesn't add to the width */
+}
+
+/* Make labels block elements so they sit above inputs */
+label {
+    display: block;
+    /* Forces the element to take up the full width, pushing items below it */
+    margin-top: 15px;
+    /* Adds vertical space above the element */
+    margin-bottom: 5px;
+    /* Adds vertical space below the element */
+    font-weight: bold;
+    /* Increases the thickness of the text strokes */
+}
+
+.name-row {
+    display: grid;
+    /* Enables CSS Grid layout for complex alignment */
+    grid-template-columns: 1fr 1fr;
+    /* Splits the row into two equal columns using fractional units */
+    gap: 20px;
+    /* Sets the specific distance between the grid items */
+}
+
+/* Style the text inputs, selects, and textareas */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea {
+    width: 97%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    /* Sets a thin 1px light-gray border */
+    border-radius: 4px;
+}
+
+
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="date"]:hover,
+textarea:hover {
+    background-color: lightblue;
+    /* Changes the fill color when the mouse cursor is over the element */
+}
+
+select {
+    width: 101%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+select:hover {
+    background-color: lightblue;
+}
+
+/* Fieldset styling for Gender and Skill */
+#forms fieldset {
+    width: 95%;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px 15px;
+    /* 10px top/bottom and 15px left/right internal spacing */
+}
+
+#forms fieldset:hover {
+    background-color: lightblue;
+}
+
+.Skill {
+    margin-bottom: -10px;
+    /* Pulls the element below it closer by 10px (negative margin) */
+}
+
+/* Inline labels for radios/checkboxes (they shouldn't be block level) */
+#forms fieldset label {
+    display: inline-block;
+    /* Allows the element to sit side-by-side with others while keeping size properties */
+    margin-top: 0;
+    font-weight: normal;
+    /* Resets text thickness to the standard default */
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background-color: darkblue;
+    color: white;
+    /* Sets the color of the text inside the button */
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    /* Removes the default browser border entirely */
+    border-radius: 4px;
+    cursor: pointer;
+    /* Changes the mouse cursor to a 'hand' icon to show it is clickable */
+    margin-top: 20px;
+    font-size: 17px;
+    /* Sets the height/size of the text characters */
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(42, 42, 255);
+    /* Uses Red-Green-Blue values to define a specific shade */
+    color: black;
 }
