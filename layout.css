@@ -6,7 +6,7 @@ author: [Chan Jay Shen]
 
 created: [20/4/2026]
 
-last modified: [23/4/2026]
+last modified: [26/4/2026]
 
 description: [.css file for 4 html pages!]
 
@@ -24,8 +24,12 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     /* spacing between each line is 1.6 times higher than each column */
-    color: #333;
-    background-color: #f4f4f4;
+    color: black;
+    background: repeating-linear-gradient(135deg, #005eff, #ffffff 20%, #005eff 30%);
+}
+
+.index_bg {
+    background: repeating-linear-gradient(135deg, #005eff, #ffffff 37%);
 }
 
 /* --- HEADER STYLING --- */
@@ -42,6 +46,31 @@ header {
     top: 0;
     z-index: 1000;
     /* Keeps header above all other page content */
+}
+
+.logo {
+    height: 150px;
+    width: 200px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    /* Remove the underline of four tabs */
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+    /* Smooth color change upon hovering */
+}
+
+.nav-menu a:hover {
+    color: #3b82f6;
+    /* Modern Blue accent */
 }
 
 main {
@@ -95,25 +124,7 @@ footer {
 
 
 /* --- INDEX.HTML PAGE --- */
-.nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
 
-.nav-menu a {
-    text-decoration: none;
-    /* Remove the underline of four tabs */
-    color: #333;
-    font-weight: 600;
-    transition: color 0.3s;
-    /* Smooth color change upon hovering */
-}
-
-.nav-menu a:hover {
-    color: #3b82f6;
-    /* Modern Blue accent */
-}
 
 /* --- LIVE BACKGROUND --- */
 .hero {
@@ -192,13 +203,30 @@ footer {
 }
 
 .text-block {
-    max-width: 800px;
-    text-align: center; /* Keeps headers and text centered */
+    max-width: 500px;
+    text-align: center;
+    /* Keeps headers and text centered */
+}
+
+.logo-link {
+    text-decoration: none;
+    color: black;
+}
+
+.logo-link:hover {
+    color: darkblue;
+}
+
+.about_studio {
+    padding: 20px;
 }
 
 .studio {
-    width: 300px;  /* Increase this number to make it bigger */
-    height: 250px;  /* Keeps the proportions perfect */
+    border: 3.5px solid black;
+}
+
+.para {
+    font-family: -apple-system, Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
@@ -220,6 +248,7 @@ table {
     padding: 12px;
     vertical-align: top;
     text-align: center;
+    color: black;
 }
 
 .first_table td ul {
@@ -258,12 +287,13 @@ table {
 .student-id {
     text-align: right;
     font-style: italic;
-    color: #333333;
+    color: black;
 }
+
 
 /* Group photo with border */
 figure {
-    border: 5px solid #333;
+    border: 5px solid black;
     /* adds a border around the figure */
     padding: 10px;
     /* space between border and photo */
@@ -458,7 +488,7 @@ tr:hover {
 /* --- POSITION.HTML PAGE --- */
 nav.jobs {
     background-color: #f4f4f4;
-    padding:0.2em 0.6em;
+    padding: 0.2em 0.6em;
     border: 4px solid #ccc;
     border-radius: 5px;
     position: fixed;
@@ -472,7 +502,8 @@ nav.jobs {
 }
 
 #position,
-#requirements, #benefits {
+#requirements,
+#benefits {
     scroll-margin-top: 225px;
 }
 
@@ -495,17 +526,24 @@ nav.jobs {
 .row-container {
     display: flex;
     flex-direction: row;
-    gap: 20px; /* Space between the boxes */
-    margin-top: 15px; /* Space between header and boxes */
+    gap: 20px;
+    /* Space between the boxes */
+    margin-top: 15px;
+    /* Space between header and boxes */
     margin-bottom: 40px;
     text-align: center;
 }
 
 /* Add border and equal width to the three sections */
-.mission, .needs, .vision {
-    flex: 1; /* Ensures equal width for all 3 boxes */
-    border: 3px dotted; /* Adds the requested border */
-    padding: 15px; /* Adds space so text doesn't touch the border */
+.mission,
+.needs,
+.vision {
+    flex: 1;
+    /* Ensures equal width for all 3 boxes */
+    border: 3px dotted;
+    /* Adds the requested border */
+    padding: 15px;
+    /* Adds space so text doesn't touch the border */
 }
 
 
@@ -530,27 +568,33 @@ nav.jobs {
 
 .job1-image {
     float: right;
-    width: 200px;   /* Set a size so it doesn't take over the page */
+    width: 200px;
+    /* Set a size so it doesn't take over the page */
     height: auto;
-    margin-left: 40px; /* Keeps the text from touching the image */
+    margin-left: 40px;
+    /* Keeps the text from touching the image */
     margin-top: -7px;
     border-radius: 10px;
 }
 
 .job2-image {
     float: right;
-    width: 200px;   /* Set a size so it doesn't take over the page */
+    width: 200px;
+    /* Set a size so it doesn't take over the page */
     height: auto;
-    margin-left: 40px; /* Keeps the text from touching the image */
+    margin-left: 40px;
+    /* Keeps the text from touching the image */
     margin-top: 25px;
     border-radius: 10px;
 }
 
 .job3-image {
     float: right;
-    width: 200px;   /* Set a size so it doesn't take over the page */
+    width: 200px;
+    /* Set a size so it doesn't take over the page */
     height: auto;
-    margin-left: 40px; /* Keeps the text from touching the image */
+    margin-left: 40px;
+    /* Keeps the text from touching the image */
     margin-top: 22px;
     border-radius: 10px;
 }
@@ -560,7 +604,7 @@ nav.jobs {
     border-radius: 5px;
     width: 45%;
     min-width: 400px;
-    margin: 50px 0px;   
+    margin: 50px 0px;
     padding: 40px;
     text-indent: 10px;
 }
