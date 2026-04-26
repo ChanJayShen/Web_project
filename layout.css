@@ -15,17 +15,22 @@ description: [.css file for 4 html pages!]
 /* General Layout Settings */
 * {
     margin: 0;
+    /* Resets default browser spacing */
     padding: 0;
+    /* Resets internal spacing */
     box-sizing: border-box;
-    /* Set fixed margin and padding */
+    /* Includes border and padding in the element's total width/height */
 }
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Set the general font for this website */
     line-height: 1.6;
-    /* spacing between each line is 1.6 times higher than each column */
+    /* Sets the vertical distance between lines of text */
     color: black;
+    /* Sets the default text color */
     background: repeating-linear-gradient(135deg, #005eff, #ffffff 20%, #005eff 30%);
+    /* Creates a looping color pattern */
 }
 
 .index_bg {
@@ -35,42 +40,51 @@ body {
 /* --- HEADER STYLING --- */
 header {
     background-color: #f8f8f8;
+    /* Sets a solid background color for header */
     padding: 0px 5%;
     display: flex;
+    /* Enables flexible layout to align children in rows or columns */
     justify-content: space-between;
+    /* Spreads children with maximum space between them */
     align-items: center;
+    /* Vertically aligns children in the middle of the container */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    /* Add a shadow beneath the box */
+    /* Adds a shadow effect for depth */
     position: sticky;
-    /* Makes header stay at the top when scrolling */
+    /* Keeps the element fixed when scrolling down */
     top: 0;
+    /* Set the distance from the top for sticky elements */
     z-index: 1000;
-    /* Keeps header above all other page content */
+    /* Sets the stack order; higher numbers appear in front of lower numbers */
 }
 
 .logo {
     height: 150px;
+    /* Sets the vertical size of the logo */
     width: 200px;
+    /* Sets the horizontal size of the logo */
 }
 
 .nav-menu {
     list-style: none;
+    /* Removes bullet points or numbers from list */
     display: flex;
     gap: 20px;
+    /* Defines the size of the gap between flexible items */
 }
 
 .nav-menu a {
     text-decoration: none;
-    /* Remove the underline of four tabs */
+    /* Removes visual text decorations like underlines */
     color: #333;
     font-weight: 600;
+    /* Controls the thickness of the text characters */
     transition: color 0.3s;
-    /* Smooth color change upon hovering */
+    /* Sets the duration and property for a smooth state change */
 }
 
 .nav-menu a:hover {
     color: #3b82f6;
-    /* Modern Blue accent */
 }
 
 main {
@@ -90,9 +104,9 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* Ensure it appears nice and clear in mobile devices like phone */
+    /* Allows flexible items to drop to the next line if space is limited */
     border-bottom: 1px solid #444;
-    /* Create a grey line as seperation */
+    /* Adds a line at the bottom of the element */
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
@@ -115,7 +129,9 @@ footer {
 
 .copyright {
     text-align: center;
+    /* Sets the text to the middle */
     font-size: 0.9rem;
+    /* Sets the size of the font */
     color: #777;
 }
 
@@ -123,44 +139,56 @@ footer {
 
 
 
-/* --- INDEX.HTML PAGE --- */
 
+
+
+/* --- INDEX.HTML PAGE --- */
 
 /* --- LIVE BACKGROUND --- */
 .hero {
     position: relative;
+    /* Set a coordinate system for absolute-positioned children */
     height: 70vh;
+    /* Sets height to 70% of the user's total screen height */
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     overflow: hidden;
+    /* Clips any content that extends beyond the container's boundaries */
     text-align: center;
 }
 
 #bg-video {
     position: absolute;
+    /* Positions the element relative to its closest ancestor */
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
+    /* Moves the element back by half its own width/height to center it */
     min-width: 100%;
+    /* Ensures the element is at least as wide as its container */
     min-height: 100%;
+    /* Ensures the element is at least as tall as its container */
     width: auto;
     height: auto;
     z-index: -1;
     object-fit: cover;
+    /* Forces the media to scale and fill the area without losing its aspect ratio */
     pointer-events: none;
-    /* Add this for better mobile compatibility */
+    /* Makes the element "invisible" to interactions */
 }
 
 .hero::after {
     content: "";
+    /* Make pseudo-element appear */
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
+    /* Sets a semi-transparent color using Red, Green, Blue, and Alpha */
     z-index: 0;
 }
 
@@ -168,33 +196,31 @@ footer {
     position: relative;
     z-index: 1;
     width: 100%;
-    /* Ensures text takes up available space */
     padding: 0 20px;
-    /* Prevents text from touching screen edges on mobile */
 }
 
 .cta-button {
     display: inline-block;
+    /* Allows the element to have width/height while sitting next to other text */
     margin-top: 20px;
     padding: 12px 30px;
     background-color: #ffcc00;
-    /* A nice gold/yellow to contrast the dark video */
     color: #000;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
+    /* Rounds the corners of an border */
     transition: transform 0.3s ease, background-color 0.3s ease;
+    /* Defines the duration for the transition */
     position: relative;
     z-index: 2;
-    /* Ensures it stays clickable above everything else */
 }
 
 .cta-button:hover {
     background-color: #e6b800;
     transform: scale(1.05);
-    /* Gives a slight "pop" when hovered */
+    /* Change the size of the element */
 }
-
 
 .company-intro {
     display: flex;
@@ -204,8 +230,8 @@ footer {
 
 .text-block {
     max-width: 500px;
+    /* Limits the maximum width of the element to prevent it from becoming too wide */
     text-align: center;
-    /* Keeps headers and text centered */
 }
 
 .logo-link {
@@ -223,6 +249,7 @@ footer {
 
 .studio {
     border: 3.5px solid black;
+    /* Defines the thickness, style, and color of the border at once */
 }
 
 .para {
@@ -235,10 +262,12 @@ footer {
 
 
 
+
 /* --- ABOUT.HTML PAGE --- */
 table {
     width: 100%;
     border-collapse: collapse;
+    /* Merges adjacent table borders into a single line */
     margin: 20px 0;
     font-family: -apple-system, Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -248,6 +277,7 @@ table {
     border: 1px solid #ccc;
     padding: 12px;
     vertical-align: top;
+    /* Aligns content to the top of the table cell */
     text-align: center;
     color: black;
 }
@@ -264,7 +294,7 @@ table {
 
 .first_table td li {
     margin-bottom: 4px;
-    /* tighter spacing between items */
+    /* reduce spacing between items */
 }
 
 .first_table th {
@@ -276,21 +306,20 @@ table {
     padding: 20px;
 }
 
-
 /* Student IDs aligned right */
 .student-heading {
     text-align: right;
     /* moves the heading text to the right */
     margin-right: 20px;
-    /* optional: adds spacing from the edge */
+    /* adds spacing from the edge */
 }
 
 .student-id {
     text-align: right;
     font-style: italic;
+    /* Tilts the text characters to the right */
     color: black;
 }
-
 
 /* Group photo with border */
 figure {
@@ -303,9 +332,8 @@ figure {
     background-color: #f9f9f9;
     /* optional background */
     width: fit-content;
-    /* keeps border tight around image */
+    /* Shrinks the container width to match the internal content */
 }
-
 
 figure img {
     max-width: 300px;
@@ -327,14 +355,13 @@ figcaption {
     background-color: #f9f9f9;
 }
 
-
 .profile-pic {
     width: 150px;
     height: 150px;
     object-fit: cover;
     /* fill the circle without stretching */
     object-position: center top;
-    /* show the top part (face) in the circle */
+    /* Positions the alignment of the image within its box */
     margin-top: -5px;
     /* move the picture up a little */
 }
@@ -343,11 +370,10 @@ figcaption {
     float: left;
     /* pushes the image to the left side of the text block */
     clip-path: circle(40%);
-    /* visually crops the image into a circular shape */
+    /* Defines a specific shape to "cut out" the visible part of an element */
     shape-outside: circle(45%);
-    /* makes surrounding text wrap around the circular boundary */
+    /* Defines a shape for inline content to wrap around */
 }
-
 
 .member.right img {
     float: right;
@@ -369,12 +395,11 @@ dt {
 
 dd {
     margin-left: 1.5em;
+    /* Sets indentation distance for definition descriptions */
     margin-bottom: 0.3em;
 }
 
 /* Fun facts table */
-
-
 caption {
     font-weight: bold;
     margin-bottom: 10px;
@@ -395,76 +420,93 @@ caption {
 
 tr:nth-child(even) {
     background-color: white;
-    /* white */
+    /* targets even-numbered rows in a list or table */
 }
 
 tr:nth-child(odd) {
     background-color: white;
-    /* white */
+    /* targets odd-numbered rows in a list or table */
 }
 
 tr:hover {
-    background-color: lightcyan; /* light blue */
+    background-color: lightcyan;
+    /* switch to light blue background when hovered*/
     cursor: pointer;
+    /* Changes the mouse icon when hovering over the element */
 }
-
 
 .member.right {
     background: linear-gradient(to right, #7a7a7a 0%, #ffffff 100%);
-
+    /* Sets a smooth color transition from left to right */
 }
 
 .member.left {
     background: linear-gradient(to left, #7a7a7a 0%, #ffffff 100%);
-
 }
 
-
-/* Animations */
+/* Animations: define how elements slide in from left or right */
 @keyframes slideInLeft {
     from {
         opacity: 0;
+        /* start invisible */
         transform: translateX(-150px);
+        /* start shifted 150px to the left */
     }
 
     to {
         opacity: 1;
+        /* end fully visible */
         transform: translateX(0);
+        /* end at normal position */
     }
 }
 
 @keyframes slideInRight {
     from {
         opacity: 0;
+        /* start invisible */
         transform: translateX(150px);
+        /* start shifted 150px to the right */
     }
 
     to {
         opacity: 1;
+        /* end fully visible */
         transform: translateX(0);
+        /* end at normal position */
     }
 }
 
-/* 2. Apply to the Left-aligned members */
+/* Apply animation to Right-aligned members (photo floats right) */
 .member.right {
     view-timeline-name: --revealing-left;
+    /* create a scroll-linked timeline */
     view-timeline-axis: block;
+    /* timeline follows block (vertical) axis */
 
-    /* Animation triggers as it enters the view */
+    /* Animation triggers when element enters viewport */
     animation: slideInLeft linear forwards;
+    /* use slideInLeft animation */
     animation-timeline: --revealing-left;
+    /* link animation to scroll timeline */
     animation-range: entry 10% cover 30%;
+    /* start at 10% entry, finish at 30% cover */
 }
 
-/* 3. Apply to the Right-aligned members */
+/* Apply animation to Left-aligned members (photo floats left) */
 .member.left {
     view-timeline-name: --revealing-right;
+    /* create a scroll-linked timeline */
     view-timeline-axis: block;
+    /* timeline follows block (vertical) axis */
 
-    /* Animation triggers as it enters the view */
+    /* Animation triggers when element enters viewport */
     animation: slideInRight linear forwards;
+    /* use slideInRight animation */
     animation-timeline: --revealing-right;
+    /* link animation to scroll timeline */
     animation-range: entry 10% cover 30%;
+    /* start at 10% entry, finish at 30% cover */
 }
 
 /* General styling to ensure the profile pics and info stay together during animation */
@@ -477,7 +519,7 @@ tr:hover {
 
 .member.right {
     flex-direction: row-reverse;
-    /* Flips the pic and text for right members */
+    /* Reverses the order of children within a flex container */
     text-align: right;
 }
 
@@ -486,13 +528,16 @@ tr:hover {
 
 
 
-/* --- POSITION.HTML PAGE --- */
+
+
+/* --- JOBS.HTML PAGE --- */
 nav.jobs {
     background-color: #f4f4f4;
     padding: 0.2em 0.6em;
     border: 4px solid #ccc;
     border-radius: 5px;
     position: fixed;
+    /* Fixes the navigation so it doesn't move during scroll */
     top: 170px;
     height: 40px;
     z-index: 1000;
@@ -500,6 +545,7 @@ nav.jobs {
 
 #description {
     scroll-margin-top: 300px;
+    /* Adds a margin at the top of an element when it is scrolled */
 }
 
 #position,
@@ -510,6 +556,7 @@ nav.jobs {
 
 .menu {
     display: inline;
+    /* Sets the element to not start on a new line and only take up necessary witdth */
     margin-right: 15px;
     font-weight: bold;
 }
@@ -527,10 +574,9 @@ nav.jobs {
 .row-container {
     display: flex;
     flex-direction: row;
+    /* Aligns flex items horizontally in a row */
     gap: 20px;
-    /* Space between the boxes */
     margin-top: 15px;
-    /* Space between header and boxes */
     margin-bottom: 40px;
     text-align: center;
 }
@@ -540,14 +586,13 @@ nav.jobs {
 .needs,
 .vision {
     flex: 1;
-    /* Ensures equal width for all 3 boxes */
+    /* Dictates that the item should grow to fill equal space within a flex container */
     border: 3px dotted;
-    /* Adds the requested border */
+    /* Sets a border style made of individual dots */
     padding: 15px;
-    /* Adds space so text doesn't touch the border */
     background-color: #ffffff60;
+    /* Sets a background color using Hex code with alpha transparency (60) */
 }
-
 
 /* Centers the boxes and adds space between them */
 .first_box {
@@ -557,6 +602,7 @@ nav.jobs {
     margin: 50px auto;
     padding: 40px;
     text-indent: 10px;
+    /* Specifies the indentation of the first line of text in a block */
     background-color: #ffffff60;
 }
 
@@ -571,11 +617,10 @@ nav.jobs {
 
 .job1-image {
     float: right;
+    /* Pushes the element to the right, allowing text to wrap around its left side */
     width: 200px;
-    /* Set a size so it doesn't take over the page */
     height: auto;
     margin-left: 40px;
-    /* Keeps the text from touching the image */
     margin-top: -7px;
     border-radius: 10px;
 }
@@ -583,10 +628,8 @@ nav.jobs {
 .job2-image {
     float: right;
     width: 200px;
-    /* Set a size so it doesn't take over the page */
     height: auto;
     margin-left: 40px;
-    /* Keeps the text from touching the image */
     margin-top: 25px;
     border-radius: 10px;
 }
@@ -594,30 +637,30 @@ nav.jobs {
 .job3-image {
     float: right;
     width: 200px;
-    /* Set a size so it doesn't take over the page */
     height: auto;
     margin-left: 40px;
-    /* Keeps the text from touching the image */
     margin-top: 22px;
     border-radius: 10px;
 }
 
 .second_box {
     border: 15px groove black;
+    /* Sets a 3D border style */
     border-radius: 5px;
     width: 45%;
     min-width: 400px;
+    /* Ensures the element never shrinks below 400px */
     margin: 50px 0px;
     padding: 40px;
     text-indent: 10px;
     background-color: #ffffff60;
 }
 
-
 #benefits {
     border: 4px inset darkblue;
+    /* Sets a 3D border style that makes the element look embedded */
     border-radius: 14px;
-    width: 32%;
+    width: 25%;
     margin: -900px auto;
     padding: 30px;
     background-color: #ffffff60;
@@ -643,7 +686,6 @@ nav.jobs {
 
 
 
-
 /* --- APPLY.HTML PAGE --- */
 #forms {
     width: 90%;
@@ -655,7 +697,7 @@ nav.jobs {
     max-width: 600px;
     /* On big screens, stop growing at 600px so it doesn't look stretched */
     min-width: 300px;
-    /* Never get smaller than 300px on a tiny phone */
+    /* Never get smaller than 300px on a phone */
     border-radius: 10px;
     box-sizing: border-box;
     /* Ensures padding doesn't add to the width */
@@ -676,7 +718,7 @@ label {
 
 .name-row {
     display: grid;
-    /* Enables CSS Grid layout for complex alignment */
+    /* Enables grid layout for complex alignment */
     grid-template-columns: 1fr 1fr;
     /* Splits the row into two equal columns using fractional units */
     gap: 20px;
@@ -695,14 +737,12 @@ textarea {
     border-radius: 4px;
 }
 
-
-
 input[type="text"]:hover,
 input[type="email"]:hover,
 input[type="date"]:hover,
 textarea:hover {
     background-color: lightblue;
-    /* Changes the fill color when the mouse cursor is over the element */
+    /* Changes the fill color when hovered */
 }
 
 select {
@@ -741,7 +781,7 @@ select:hover {
     /* Allows the element to sit side-by-side with others while keeping size properties */
     margin-top: 0;
     font-weight: normal;
-    /* Resets text thickness to the standard default */
+    /* Resets text thickness to default */
 }
 
 /* Submit Button */
