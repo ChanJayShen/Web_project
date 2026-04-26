@@ -240,6 +240,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
+    font-family: -apple-system, Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .first_table th,
@@ -403,10 +404,10 @@ tr:nth-child(odd) {
 }
 
 tr:hover {
-    background-color: lightcyan;
-    /* light blue */
+    background-color: lightcyan; /* light blue */
     cursor: pointer;
 }
+
 
 .member.right {
     background: linear-gradient(to right, #7a7a7a 0%, #ffffff 100%);
@@ -544,6 +545,7 @@ nav.jobs {
     /* Adds the requested border */
     padding: 15px;
     /* Adds space so text doesn't touch the border */
+    background-color: #ffffff60;
 }
 
 
@@ -555,6 +557,7 @@ nav.jobs {
     margin: 50px auto;
     padding: 40px;
     text-indent: 10px;
+    background-color: #ffffff60;
 }
 
 .first_box.box1 {
@@ -607,6 +610,7 @@ nav.jobs {
     margin: 50px 0px;
     padding: 40px;
     text-indent: 10px;
+    background-color: #ffffff60;
 }
 
 
@@ -616,7 +620,7 @@ nav.jobs {
     width: 32%;
     margin: -900px auto;
     padding: 30px;
-    background: lightskyblue;
+    background-color: #ffffff60;
     float: right;
     box-shadow: 10px 10px 5px #aaaaaa;
 }
@@ -655,6 +659,7 @@ nav.jobs {
     border-radius: 10px;
     box-sizing: border-box;
     /* Ensures padding doesn't add to the width */
+    background-color: #f8f8f8;
 }
 
 /* Make labels block elements so they sit above inputs */
